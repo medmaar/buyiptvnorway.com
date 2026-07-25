@@ -780,8 +780,9 @@
 .mojo-pricing-sub{color:var(--muted);font-size:.95rem;font-family:'Plus Jakarta Sans','DM Sans',sans-serif;}
 .mojo-dev-wrap{margin:2.5rem 0;}
 .mojo-dev-label{color:rgba(255,255,255,.7);font-size:.85rem;font-weight:600;text-align:center;margin-bottom:1rem;font-family:'Plus Jakarta Sans','DM Sans',sans-serif;}
-.mojo-dev-scroll{overflow-x:auto;overflow-y:visible;-webkit-overflow-scrolling:touch;scrollbar-width:none;width:100%;}
+.mojo-dev-scroll{overflow-x:auto;overflow-y:visible;-webkit-overflow-scrolling:touch;scrollbar-width:none;width:100%;cursor:grab;}
 .mojo-dev-scroll::-webkit-scrollbar{display:none;}
+.mojo-dev-scroll.dragging{cursor:grabbing;user-select:none;}
 .mojo-dev-row{display:inline-flex;gap:8px;flex-wrap:nowrap;justify-content:flex-start;padding:4px 2px 10px;min-width:100%;}
 .mojo-dev-btn{background:var(--red);border:none;color:#fff;padding:12px 24px;border-radius:12px;cursor:pointer;font-size:.85rem;font-weight:800;transition:all .2s;white-space:nowrap;flex-shrink:0;font-family:'Plus Jakarta Sans','DM Sans',sans-serif;}
 .mojo-dev-btn:hover{filter:brightness(1.12);transform:translateY(-1px);}
@@ -928,6 +929,37 @@
     });
   }
   if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',attachDevBtns);}else{attachDevBtns();}
+
+// Drag-to-scroll for connection selector
+(function(){
+  function initDragScroll(el){
+    var isDragging=false,startX=0,scrollLeft=0,moved=false;
+    el.addEventListener('mousedown',function(e){
+      isDragging=true;moved=false;
+      startX=e.pageX-el.offsetLeft;
+      scrollLeft=el.scrollLeft;
+      el.classList.add('dragging');
+    });
+    document.addEventListener('mousemove',function(e){
+      if(!isDragging)return;
+      e.preventDefault();
+      var x=e.pageX-el.offsetLeft;
+      var walk=(x-startX)*1.2;
+      if(Math.abs(walk)>4)moved=true;
+      el.scrollLeft=scrollLeft-walk;
+    });
+    document.addEventListener('mouseup',function(){
+      isDragging=false;
+      el.classList.remove('dragging');
+    });
+    // Prevent button click if we dragged
+    el.addEventListener('click',function(e){
+      if(moved){e.stopPropagation();e.preventDefault();moved=false;}
+    },true);
+  }
+  var scroller=document.querySelector('.mojo-dev-scroll');
+  if(scroller)initDragScroll(scroller);
+})();
 })();
 var PRICES={1:[9,29,39,49],2:[18,50,69,89],3:[27,75,105,135],4:[36,99,140,180],5:[45,120,175,225],6:[54,144,210,270],7:[63,168,245,315],8:[72,192,280,360],9:[81,216,315,405],10:[90,240,350,450]};
 var currDev=1;
