@@ -149,40 +149,61 @@
 <!-- ═══ HERO ═══ -->
 <div style="position:relative;overflow:hidden;min-height:90vh;display:flex;align-items:center;">
   <div style="position:absolute;inset:0;z-index:0;">
-    <img src="images/hero/haaland.jpg" alt="Norway IPTV" loading="eager" fetchpriority="high"
-      style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;">
-    <div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,4,20,.95) 0%,rgba(10,4,20,.80) 50%,rgba(10,4,20,.20) 100%);"></div>
-    <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,4,20,.3) 0%,transparent 30%,transparent 70%,rgba(10,4,20,.9) 100%);"></div>
+    <img src="images/hero/haaland.jpg" alt="NorwayIPTV — Watch Eliteserien & World Cup Live" loading="eager" fetchpriority="high"
+      style="width:100%;height:100%;object-fit:cover;object-position:center center;display:block;">
+    <!-- Strong dark overlay on left fading right so Haaland shows through -->
+    <div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(8,3,16,1) 0%,rgba(8,3,16,.97) 28%,rgba(8,3,16,.75) 52%,rgba(8,3,16,.15) 80%,rgba(8,3,16,.05) 100%);"></div>
+    <!-- Top/bottom edge vignette -->
+    <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,3,16,.6) 0%,transparent 22%,transparent 78%,rgba(8,3,16,.7) 100%);"></div>
   </div>
-  <div style="max-width:1060px;margin:0 auto;padding:80px 24px;position:relative;z-index:1;width:100%;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:40px;">
-  <div style="max-width:520px;">
+
+  <div style="max-width:1060px;margin:0 auto;padding:80px 24px 70px;position:relative;z-index:1;width:100%;">
     <style>
     .hero-brand-title{font-size:clamp(2.2rem,4.5vw,4rem);font-weight:800;line-height:1;letter-spacing:-.02em;color:#fff;font-family:'Plus Jakarta Sans','DM Sans',sans-serif;display:block;margin:0 0 10px;}
     .hero-brand-title .w2{color:#fd0322;}
-    @media(max-width:768px){#hero-wrap{min-height:auto!important;}#hero-wrap>div:first-child{background:linear-gradient(180deg,rgba(10,4,20,.6) 0%,rgba(10,4,20,.95) 55%,rgba(10,4,20,1) 100%)!important;}}
+    .hero-stat-strip{display:flex;gap:0;flex-wrap:wrap;margin-top:32px;border:1px solid rgba(255,255,255,.1);border-radius:14px;overflow:hidden;background:rgba(8,3,16,.55);backdrop-filter:blur(10px);max-width:480px;}
+    .hero-stat-item{flex:1;min-width:110px;padding:14px 16px;border-right:1px solid rgba(255,255,255,.08);text-align:center;}
+    .hero-stat-item:last-child{border-right:none;}
+    .hero-stat-num{font-size:1.3rem;font-weight:900;color:#fd0322;font-family:'Plus Jakarta Sans',sans-serif;line-height:1;}
+    .hero-stat-lbl{font-size:.62rem;color:rgba(232,224,255,.5);font-weight:600;text-transform:uppercase;letter-spacing:.07em;margin-top:3px;}
+    @media(max-width:768px){
+      .hero-stat-strip{max-width:100%;}
+      .hero-stat-item{min-width:80px;padding:10px 10px;}
+      .hero-stat-num{font-size:1.1rem;}
+    }
     </style>
-    <span class="hero-brand-title"><span class="w1">Norway</span><span class="w2">IPTV</span></span>
-    <h1 style="font-size:clamp(2rem,5vw,4rem);font-weight:900;line-height:1;letter-spacing:-.02em;color:#fff;margin:0 0 20px;font-family:'Plus Jakarta Sans','DM Sans',sans-serif;">LIVE TV &amp; ON<br>DEMAND</h1>
-    <ul style="list-style:none;padding:0;margin:0 0 28px;display:flex;flex-direction:column;gap:9px;">
-      <li style="display:flex;align-items:center;gap:9px;color:#fff;font-size:.97rem;font-weight:500;font-family:'Plus Jakarta Sans','DM Sans',sans-serif;"><span style="width:8px;height:8px;border-radius:50%;background:#fd0322;display:inline-block;flex-shrink:0;"></span> 50,000+ Live Channels — HD &amp; 4K</li>
-      <li style="display:flex;align-items:center;gap:9px;color:#fff;font-size:.97rem;font-weight:500;font-family:'Plus Jakarta Sans','DM Sans',sans-serif;"><span style="width:8px;height:8px;border-radius:50%;background:#fd0322;display:inline-block;flex-shrink:0;"></span> NRK, TV2, Viaplay &amp; All Norwegian Channels</li>
-      <li style="display:flex;align-items:center;gap:9px;color:#fff;font-size:.97rem;font-weight:500;font-family:'Plus Jakarta Sans','DM Sans',sans-serif;"><span style="width:8px;height:8px;border-radius:50%;background:#fd0322;display:inline-block;flex-shrink:0;"></span> 300,000+ Movies &amp; Series On Demand</li>
-      <li style="display:flex;align-items:center;gap:9px;color:#fff;font-size:.97rem;font-weight:500;font-family:'Plus Jakarta Sans','DM Sans',sans-serif;"><span style="width:8px;height:8px;border-radius:50%;background:#fd0322;display:inline-block;flex-shrink:0;"></span> Premium Sports — NFL, NBA, UFC &amp; PPV</li>
-      <li style="display:flex;align-items:center;gap:9px;color:#fff;font-size:.97rem;font-weight:500;font-family:'Plus Jakarta Sans','DM Sans',sans-serif;"><span style="width:8px;height:8px;border-radius:50%;background:#fd0322;display:inline-block;flex-shrink:0;"></span> Works on All Devices — No Contract</li>
-    </ul>
-    <div style="display:flex;gap:12px;flex-wrap:wrap;">
-      <a href="pricing.html" style="display:inline-flex;align-items:center;gap:8px;padding:14px 32px;border-radius:30px;background:#fd0322;color:#fff;font-weight:800;font-size:.95rem;text-decoration:none;font-family:'Plus Jakarta Sans','DM Sans',sans-serif;box-shadow:0 6px 28px rgba(253,3,34,.4);">Subscribe Now</a>
-      <a href="free-trial.html" style="display:inline-flex;align-items:center;gap:8px;padding:14px 32px;border-radius:30px;border:1px solid rgba(255,255,255,.2);color:#fff;font-weight:700;font-size:.95rem;text-decoration:none;font-family:'Plus Jakarta Sans','DM Sans',sans-serif;">▶ Try Free for 1 Day</a>
+
+    <div style="max-width:540px;">
+      <!-- Live badge -->
+      <div style="display:inline-flex;align-items:center;gap:7px;background:rgba(253,3,34,.15);border:1px solid rgba(253,3,34,.4);border-radius:30px;padding:6px 16px;font-size:.72rem;font-weight:800;color:#fd0322;letter-spacing:.1em;text-transform:uppercase;margin-bottom:20px;font-family:'Plus Jakarta Sans','DM Sans',sans-serif;">
+        <span style="width:7px;height:7px;border-radius:50%;background:#fd0322;display:inline-block;animation:mss-pulse 1.4s ease-in-out infinite;"></span>
+        Live Sport &amp; Norwegian Channels
+      </div>
+
+      <span class="hero-brand-title"><span class="w1">Norway</span><span class="w2">IPTV</span></span>
+      <h1 style="font-size:clamp(2rem,5vw,4rem);font-weight:900;line-height:1;letter-spacing:-.02em;color:#fff;margin:0 0 22px;font-family:'Plus Jakarta Sans','DM Sans',sans-serif;">LIVE TV &amp; ON<br>DEMAND</h1>
+
+      <ul style="list-style:none;padding:0;margin:0 0 28px;display:flex;flex-direction:column;gap:9px;">
+        <li style="display:flex;align-items:center;gap:9px;color:rgba(255,255,255,.9);font-size:.97rem;font-weight:500;font-family:'Plus Jakarta Sans','DM Sans',sans-serif;"><span style="width:7px;height:7px;border-radius:50%;background:#fd0322;display:inline-block;flex-shrink:0;"></span> 50,000+ Live Channels — HD &amp; 4K</li>
+        <li style="display:flex;align-items:center;gap:9px;color:rgba(255,255,255,.9);font-size:.97rem;font-weight:500;font-family:'Plus Jakarta Sans','DM Sans',sans-serif;"><span style="width:7px;height:7px;border-radius:50%;background:#fd0322;display:inline-block;flex-shrink:0;"></span> NRK, TV2, Viaplay &amp; All Norwegian Channels</li>
+        <li style="display:flex;align-items:center;gap:9px;color:rgba(255,255,255,.9);font-size:.97rem;font-weight:500;font-family:'Plus Jakarta Sans','DM Sans',sans-serif;"><span style="width:7px;height:7px;border-radius:50%;background:#fd0322;display:inline-block;flex-shrink:0;"></span> 300,000+ Movies &amp; Series On Demand</li>
+        <li style="display:flex;align-items:center;gap:9px;color:rgba(255,255,255,.9);font-size:.97rem;font-weight:500;font-family:'Plus Jakarta Sans','DM Sans',sans-serif;"><span style="width:7px;height:7px;border-radius:50%;background:#fd0322;display:inline-block;flex-shrink:0;"></span> Premium Sports — Eliteserien, NFL, UFC &amp; PPV</li>
+        <li style="display:flex;align-items:center;gap:9px;color:rgba(255,255,255,.9);font-size:.97rem;font-weight:500;font-family:'Plus Jakarta Sans','DM Sans',sans-serif;"><span style="width:7px;height:7px;border-radius:50%;background:#fd0322;display:inline-block;flex-shrink:0;"></span> Works on All Devices — No Contract</li>
+      </ul>
+
+      <div style="display:flex;gap:12px;flex-wrap:wrap;">
+        <a href="pricing.html" style="display:inline-flex;align-items:center;gap:8px;padding:14px 32px;border-radius:30px;background:#fd0322;color:#fff;font-weight:800;font-size:.95rem;text-decoration:none;font-family:'Plus Jakarta Sans','DM Sans',sans-serif;box-shadow:0 6px 28px rgba(253,3,34,.45);">Subscribe Now</a>
+        <a href="free-trial.html" style="display:inline-flex;align-items:center;gap:8px;padding:14px 32px;border-radius:30px;border:1px solid rgba(255,255,255,.25);color:#fff;font-weight:700;font-size:.95rem;text-decoration:none;font-family:'Plus Jakarta Sans','DM Sans',sans-serif;backdrop-filter:blur(6px);">▶ Try Free for 1 Day</a>
+      </div>
+
+      <!-- Stats strip below CTAs -->
+      <div class="hero-stat-strip">
+        <div class="hero-stat-item"><div class="hero-stat-num">50K+</div><div class="hero-stat-lbl">Live Channels</div></div>
+        <div class="hero-stat-item"><div class="hero-stat-num">300K+</div><div class="hero-stat-lbl">Movies &amp; Series</div></div>
+        <div class="hero-stat-item"><div class="hero-stat-num">4K</div><div class="hero-stat-lbl">Ultra HD</div></div>
+        <div class="hero-stat-item"><div class="hero-stat-num">24/7</div><div class="hero-stat-lbl">Support</div></div>
+      </div>
     </div>
-  </div>
-  <div style="max-width:300px;width:100%;">
-    <div style="background:rgba(10,4,20,.65);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.12);border-radius:20px;padding:28px;display:grid;grid-template-columns:1fr 1fr;gap:16px;">
-      <div style="text-align:center;"><div style="font-size:1.6rem;font-weight:900;color:#fd0322;font-family:'Plus Jakarta Sans',sans-serif;">50,000+</div><div style="font-size:.72rem;color:rgba(232,224,255,.55);font-weight:600;text-transform:uppercase;letter-spacing:.06em;margin-top:4px;">Live Channels</div></div>
-      <div style="text-align:center;"><div style="font-size:1.6rem;font-weight:900;color:#fd0322;font-family:'Plus Jakarta Sans',sans-serif;">300K+</div><div style="font-size:.72rem;color:rgba(232,224,255,.55);font-weight:600;text-transform:uppercase;letter-spacing:.06em;margin-top:4px;">Movies &amp; Series</div></div>
-      <div style="text-align:center;"><div style="font-size:1.6rem;font-weight:900;color:#fd0322;font-family:'Plus Jakarta Sans',sans-serif;">4K</div><div style="font-size:.72rem;color:rgba(232,224,255,.55);font-weight:600;text-transform:uppercase;letter-spacing:.06em;margin-top:4px;">Ultra HD Quality</div></div>
-      <div style="text-align:center;"><div style="font-size:1.6rem;font-weight:900;color:#fd0322;font-family:'Plus Jakarta Sans',sans-serif;">24/7</div><div style="font-size:.72rem;color:rgba(232,224,255,.55);font-weight:600;text-transform:uppercase;letter-spacing:.06em;margin-top:4px;">Support</div></div>
-    </div>
-  </div>
   </div>
 </div>
 
