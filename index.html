@@ -147,11 +147,19 @@
 <div class="page-content">
 
 <!-- ═══ HERO ═══ -->
-<div style="background:linear-gradient(135deg,#0a0414 0%,#140c20 100%);padding:60px 24px 40px;display:flex;align-items:center;justify-content:center;min-height:80vh;flex-wrap:wrap;gap:40px;">
+<div style="position:relative;overflow:hidden;min-height:90vh;display:flex;align-items:center;">
+  <div style="position:absolute;inset:0;z-index:0;">
+    <img src="images/hero/haaland.jpg" alt="Norway IPTV" loading="eager" fetchpriority="high"
+      style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;">
+    <div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,4,20,.95) 0%,rgba(10,4,20,.80) 50%,rgba(10,4,20,.20) 100%);"></div>
+    <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,4,20,.3) 0%,transparent 30%,transparent 70%,rgba(10,4,20,.9) 100%);"></div>
+  </div>
+  <div style="max-width:1060px;margin:0 auto;padding:80px 24px;position:relative;z-index:1;width:100%;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:40px;">
   <div style="max-width:520px;">
     <style>
     .hero-brand-title{font-size:clamp(2.2rem,4.5vw,4rem);font-weight:800;line-height:1;letter-spacing:-.02em;color:#fff;font-family:'Plus Jakarta Sans','DM Sans',sans-serif;display:block;margin:0 0 10px;}
     .hero-brand-title .w2{color:#fd0322;}
+    @media(max-width:768px){#hero-wrap{min-height:auto!important;}#hero-wrap>div:first-child{background:linear-gradient(180deg,rgba(10,4,20,.6) 0%,rgba(10,4,20,.95) 55%,rgba(10,4,20,1) 100%)!important;}}
     </style>
     <span class="hero-brand-title"><span class="w1">Norway</span><span class="w2">IPTV</span></span>
     <h1 style="font-size:clamp(2rem,5vw,4rem);font-weight:900;line-height:1;letter-spacing:-.02em;color:#fff;margin:0 0 20px;font-family:'Plus Jakarta Sans','DM Sans',sans-serif;">LIVE TV &amp; ON<br>DEMAND</h1>
@@ -167,13 +175,14 @@
       <a href="free-trial.html" style="display:inline-flex;align-items:center;gap:8px;padding:14px 32px;border-radius:30px;border:1px solid rgba(255,255,255,.2);color:#fff;font-weight:700;font-size:.95rem;text-decoration:none;font-family:'Plus Jakarta Sans','DM Sans',sans-serif;">▶ Try Free for 1 Day</a>
     </div>
   </div>
-  <div style="max-width:420px;width:100%;">
-    <div style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:20px;padding:28px;display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+  <div style="max-width:300px;width:100%;">
+    <div style="background:rgba(10,4,20,.65);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.12);border-radius:20px;padding:28px;display:grid;grid-template-columns:1fr 1fr;gap:16px;">
       <div style="text-align:center;"><div style="font-size:1.6rem;font-weight:900;color:#fd0322;font-family:'Plus Jakarta Sans',sans-serif;">50,000+</div><div style="font-size:.72rem;color:rgba(232,224,255,.55);font-weight:600;text-transform:uppercase;letter-spacing:.06em;margin-top:4px;">Live Channels</div></div>
       <div style="text-align:center;"><div style="font-size:1.6rem;font-weight:900;color:#fd0322;font-family:'Plus Jakarta Sans',sans-serif;">300K+</div><div style="font-size:.72rem;color:rgba(232,224,255,.55);font-weight:600;text-transform:uppercase;letter-spacing:.06em;margin-top:4px;">Movies &amp; Series</div></div>
       <div style="text-align:center;"><div style="font-size:1.6rem;font-weight:900;color:#fd0322;font-family:'Plus Jakarta Sans',sans-serif;">4K</div><div style="font-size:.72rem;color:rgba(232,224,255,.55);font-weight:600;text-transform:uppercase;letter-spacing:.06em;margin-top:4px;">Ultra HD Quality</div></div>
       <div style="text-align:center;"><div style="font-size:1.6rem;font-weight:900;color:#fd0322;font-family:'Plus Jakarta Sans',sans-serif;">24/7</div><div style="font-size:.72rem;color:rgba(232,224,255,.55);font-weight:600;text-transform:uppercase;letter-spacing:.06em;margin-top:4px;">Support</div></div>
     </div>
+  </div>
   </div>
 </div>
 
@@ -1025,14 +1034,17 @@ function selectDev(n){
     <a href="pricing.html" class="wd-btn">Subscribe Now &rarr;</a>
   </div>
   <div class="wd-img">
-    <img src="https://maplestreamtv.com/wp-content/uploads/sites/6/2026/01/Hoknew3-768x488.png" alt="Watch NorwayIPTV on all your devices" loading="lazy">
+    <img src="images/hero/fans-viking.jpg" alt="Norwegian fans watching NorwayIPTV" loading="lazy" style="width:100%;border-radius:20px;box-shadow:0 20px 60px rgba(0,0,0,.6);display:block;">
   </div>
 </div>
 </section>
 
 <!-- ═══ FREE TRIAL CTA ═══ -->
-<section id="mojo-trial-cta" style="background:linear-gradient(135deg,rgba(253,3,34,.1) 0%,rgba(120,0,50,.16) 100%);padding:72px 24px;border-top:1px solid rgba(253,3,34,.2);border-bottom:1px solid rgba(253,3,34,.2);">
-<style>
+<section id="mojo-trial-cta" style="position:relative;overflow:hidden;padding:72px 24px;border-top:1px solid rgba(253,3,34,.2);border-bottom:1px solid rgba(253,3,34,.2);">
+  <div style="position:absolute;inset:0;z-index:0;">
+    <img src="images/hero/stadium.jpg" alt="" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:center 30%;display:block;">
+    <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(10,4,20,.9) 0%,rgba(80,0,20,.82) 100%);"></div>
+  </div><style>
 #mojo-trial-cta .tc-inner{max-width:680px;margin:0 auto;text-align:center;}
 #mojo-trial-cta .tc-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(253,3,34,.15);border:1px solid rgba(253,3,34,.4);border-radius:30px;padding:6px 16px;font-size:.72rem;font-weight:800;color:#fd0322;letter-spacing:.12em;text-transform:uppercase;margin-bottom:20px;font-family:'Plus Jakarta Sans','DM Sans',sans-serif;}
 #mojo-trial-cta h2{font-size:clamp(2.2rem,6vw,4rem);font-weight:900;color:#fff;margin:0 0 16px;font-family:'Plus Jakarta Sans','DM Sans',sans-serif;line-height:1;}
@@ -1040,7 +1052,7 @@ function selectDev(n){
 #mojo-trial-cta .tc-btn{display:inline-flex;align-items:center;gap:8px;padding:15px 36px;border-radius:30px;background:#fd0322;color:#fff;font-weight:800;font-size:1rem;text-decoration:none;box-shadow:0 8px 32px rgba(253,3,34,.4);transition:all .2s;font-family:'Plus Jakarta Sans','DM Sans',sans-serif;}
 #mojo-trial-cta .tc-btn:hover{background:#c50018;transform:translateY(-2px);}
 </style>
-<div class="tc-inner">
+<div class="tc-inner" style="position:relative;z-index:1;">
   <div class="tc-badge">🎬 24H Free of Charge</div>
   <h2>Try It For Free!</h2>
   <p>Get 24-hour free access to NorwayIPTV. Experience all Norwegian channels, live sports and 300,000+ VOD titles on your device. No credit card required.</p>
