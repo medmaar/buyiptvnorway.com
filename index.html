@@ -376,9 +376,10 @@
 .mms-poster-overflow{overflow:hidden;border-radius:16px;mask-image:linear-gradient(to right,transparent 0%,black 6%,black 94%,transparent 100%);-webkit-mask-image:linear-gradient(to right,transparent 0%,black 6%,black 94%,transparent 100%);}
 .mms-poster-track{display:flex;gap:14px;width:max-content;animation:mms-poster-rtl 35s linear infinite;}
 @keyframes mms-poster-rtl{0%{transform:translateX(0);}100%{transform:translateX(-50%);}}
-.mms-poster{flex:0 0 auto;width:170px;border-radius:14px;overflow:hidden;border:1px solid rgba(0,200,255,.15);box-shadow:0 8px 28px rgba(0,0,0,.5);}
-.mms-poster img{width:100%;height:240px;object-fit:cover;display:block;}
-@media(max-width:600px){.mms-stats{grid-template-columns:1fr;}.mms-poster{width:130px;}.mms-poster img{height:185px;}}
+.mms-poster{flex:0 0 auto;width:240px;border-radius:16px;overflow:hidden;border:1px solid rgba(0,200,255,.2);box-shadow:0 12px 36px rgba(0,0,0,.6);transition:transform .2s;}
+.mms-poster:hover{transform:scale(1.04);}
+.mms-poster img{width:100%;height:340px;object-fit:cover;display:block;}
+@media(max-width:600px){.mms-poster{width:160px;}.mms-poster img{height:228px;}}
 </style>
 
 <div class="mms-channels-strip">
@@ -418,25 +419,25 @@
 
 <div class="mms-inner">
   <div style="margin-top:28px;">
-    <p style="text-align:center;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.14em;color:rgba(232,224,255,.35);margin:0 0 14px;font-family:'Plus Jakarta Sans','DM Sans',sans-serif;">300,000+ Movies &amp; Series</p>
+    <p style="text-align:center;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.14em;color:rgba(232,224,255,.35);margin:0 0 14px;font-family:'Plus Jakarta Sans','DM Sans',sans-serif;">🇳🇴 Norwegian Originals — All Available on NorwayIPTV</p>
     <div class="mms-poster-overflow">
       <div class="mms-poster-track">
-        <div class="mms-poster"><img src="images/vod/poster-1.jpg" loading="lazy" alt="Movie poster"></div>
-        <div class="mms-poster"><img src="images/vod/poster-2.jpg" loading="lazy" alt="Movie poster"></div>
-        <div class="mms-poster"><img src="images/vod/poster-3.jpg" loading="lazy" alt="Movie poster"></div>
-        <div class="mms-poster"><img src="images/vod/poster-4.jpg" loading="lazy" alt="Movie poster"></div>
-        <div class="mms-poster"><img src="images/vod/poster-5.jpg" loading="lazy" alt="Movie poster"></div>
-        <div class="mms-poster"><img src="images/vod/poster-6.jpg" loading="lazy" alt="Movie poster"></div>
-        <div class="mms-poster"><img src="images/vod/poster-7.jpg" loading="lazy" alt="Movie poster"></div>
-        <div class="mms-poster"><img src="images/vod/poster-8.jpg" loading="lazy" alt="Movie poster"></div>
-        <div class="mms-poster"><img src="images/vod/poster-1.jpg" loading="lazy" alt="Movie poster"></div>
-        <div class="mms-poster"><img src="images/vod/poster-2.jpg" loading="lazy" alt="Movie poster"></div>
-        <div class="mms-poster"><img src="images/vod/poster-3.jpg" loading="lazy" alt="Movie poster"></div>
-        <div class="mms-poster"><img src="images/vod/poster-4.jpg" loading="lazy" alt="Movie poster"></div>
-        <div class="mms-poster"><img src="images/vod/poster-5.jpg" loading="lazy" alt="Movie poster"></div>
-        <div class="mms-poster"><img src="images/vod/poster-6.jpg" loading="lazy" alt="Movie poster"></div>
-        <div class="mms-poster"><img src="images/vod/poster-7.jpg" loading="lazy" alt="Movie poster"></div>
-        <div class="mms-poster"><img src="images/vod/poster-8.jpg" loading="lazy" alt="Movie poster"></div>
+        <div class="mms-poster"><img src="images/vod/poster-1.jpg" loading="lazy" alt="Ragnarok"></div>
+        <div class="mms-poster"><img src="images/vod/poster-2.jpg" loading="lazy" alt="Troll"></div>
+        <div class="mms-poster"><img src="images/vod/poster-3.jpg" loading="lazy" alt="Ølhunden Berit"></div>
+        <div class="mms-poster"><img src="images/vod/poster-4.jpg" loading="lazy" alt="Detective Hole"></div>
+        <div class="mms-poster"><img src="images/vod/poster-5.jpg" loading="lazy" alt="There's Something in the Barn"></div>
+        <div class="mms-poster"><img src="images/vod/poster-6.jpg" loading="lazy" alt="Number 24"></div>
+        <div class="mms-poster"><img src="images/vod/poster-7.jpg" loading="lazy" alt="La Palma"></div>
+        <div class="mms-poster"><img src="images/vod/poster-8.jpg" loading="lazy" alt="The Remarkable Life of Ibelin"></div>
+        <div class="mms-poster"><img src="images/vod/poster-1.jpg" loading="lazy" alt="Ragnarok"></div>
+        <div class="mms-poster"><img src="images/vod/poster-2.jpg" loading="lazy" alt="Troll"></div>
+        <div class="mms-poster"><img src="images/vod/poster-3.jpg" loading="lazy" alt="Ølhunden Berit"></div>
+        <div class="mms-poster"><img src="images/vod/poster-4.jpg" loading="lazy" alt="Detective Hole"></div>
+        <div class="mms-poster"><img src="images/vod/poster-5.jpg" loading="lazy" alt="There's Something in the Barn"></div>
+        <div class="mms-poster"><img src="images/vod/poster-6.jpg" loading="lazy" alt="Number 24"></div>
+        <div class="mms-poster"><img src="images/vod/poster-7.jpg" loading="lazy" alt="La Palma"></div>
+        <div class="mms-poster"><img src="images/vod/poster-8.jpg" loading="lazy" alt="The Remarkable Life of Ibelin"></div>
       </div>
     </div>
   </div>
