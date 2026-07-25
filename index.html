@@ -150,7 +150,7 @@
 <div style="position:relative;overflow:hidden;min-height:90vh;display:flex;align-items:center;">
   <div style="position:absolute;inset:0;z-index:0;">
     <img src="images/hero/haaland.jpg" alt="NorwayIPTV — Watch Eliteserien & World Cup Live" loading="eager" fetchpriority="high"
-      style="width:100%;height:100%;object-fit:cover;object-position:center center;display:block;">
+      style="width:100%;height:100%;object-fit:cover;object-position:55% 18%;display:block;">
     <!-- Strong dark overlay on left fading right so Haaland shows through -->
     <div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(8,3,16,.88) 0%,rgba(8,3,16,.75) 32%,rgba(8,3,16,.35) 58%,rgba(8,3,16,.0) 80%);"></div>
     <!-- Top/bottom edge vignette -->
@@ -215,7 +215,13 @@
 .mss-h2{font-size:clamp(1.9rem,3.5vw,3rem);font-weight:900;color:#fff;line-height:1.1;margin-bottom:12px;text-align:center;font-family:'Plus Jakarta Sans','DM Sans',sans-serif;}
 .mss-sub{font-size:.97rem;color:rgba(232,224,255,.65);text-align:center;max-width:580px;margin:0 auto 28px;line-height:1.75;font-family:'Plus Jakarta Sans','DM Sans',sans-serif;}
 .mss-phone-outer{display:flex;justify-content:center;margin:0 auto 0;padding:0 20px;}
-.mss-phone-wrap{position:relative;width:300px;flex-shrink:0;background:#100820;border-radius:50px;border:3.5px solid #2a1e4a;box-shadow:0 0 0 1px rgba(253,3,34,.18),0 0 70px rgba(253,3,34,.1),0 36px 90px rgba(0,0,0,.85),inset 0 1px 0 rgba(255,255,255,.07);padding:14px 10px 10px;}
+.mss-phone-wrap{position:relative;width:380px;flex-shrink:0;background:#100820;border-radius:50px;border:3.5px solid #2a1e4a;box-shadow:0 0 0 1px rgba(253,3,34,.18),0 0 70px rgba(253,3,34,.1),0 36px 90px rgba(0,0,0,.85),inset 0 1px 0 rgba(255,255,255,.07);padding:14px 10px 10px;}
+@media(max-width:600px){
+  .mss-phone-outer{padding:0;}
+  .mss-phone-wrap{width:100%;border-radius:0;border:none;background:transparent;padding:0;box-shadow:none;}
+  .mss-phone-notch,.mss-phone-btn,.mss-phone-btn2,.mss-phone-vol,.mss-phone-vol2{display:none;}
+  .mss-phone-screen{border-radius:0;}
+}
 .mss-phone-notch{width:76px;height:8px;background:#2a1e4a;border-radius:8px;margin:0 auto 10px;}
 .mss-phone-btn{position:absolute;right:-7px;top:110px;width:4px;height:44px;background:#2a1e4a;border-radius:4px;}
 .mss-phone-btn2{position:absolute;right:-7px;top:165px;width:4px;height:44px;background:#2a1e4a;border-radius:4px;}
@@ -310,12 +316,6 @@
       <div class="mss-phone-vol2"></div>
       <div class="mss-phone-screen">
         <video autoplay muted playsinline loop src="videos/norway-fans.mp4"></video>
-        <div class="mss-live-badge"><span class="mss-live-dot"></span> LIVE SPORTS</div>
-        <div class="mss-video-bar">
-          <span class="mss-ch-pill">🇳🇴 World Cup 2026</span>
-          <span class="mss-ch-pill">⚽ Eliteserien</span>
-          <span class="mss-ch-pill">🏆 Champions League</span>
-        </div>
       </div>
     </div>
   </div>
@@ -387,7 +387,7 @@
 @keyframes mfb-shine2{0%{background-position:0% center;}100%{background-position:200% center;}}
 </style>
   <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(0,200,255,.1);border:1px solid rgba(0,200,255,.3);border-radius:30px;padding:7px 18px;font-size:.75rem;font-weight:800;color:#00c8ff;letter-spacing:.12em;text-transform:uppercase;margin-bottom:22px;font-family:'Plus Jakarta Sans','DM Sans',sans-serif;">On Demand — 300,000+ Titles</div>
-  <h2 style="font-size:clamp(4rem,11vw,9.5rem);font-weight:900;line-height:.9;letter-spacing:-.02em;margin:0 auto 22px;background:linear-gradient(135deg,#00c8ff 0%,#b06fff 40%,#fff 70%,#00c8ff 100%);background-size:200% auto;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:mfb-shine2 4s linear infinite;font-family:'Plus Jakarta Sans','DM Sans',sans-serif;text-transform:uppercase;">Films &amp; Series</h2>
+  <h2 style="font-size:clamp(2rem,8.5vw,9.5rem);font-weight:900;line-height:.9;letter-spacing:-.02em;margin:0 auto 22px;background:linear-gradient(135deg,#00c8ff 0%,#b06fff 40%,#fff 70%,#00c8ff 100%);background-size:200% auto;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:mfb-shine2 4s linear infinite;font-family:'Plus Jakarta Sans','DM Sans',sans-serif;text-transform:uppercase;white-space:nowrap;">Films &amp; Series</h2>
 </div>
 
 <section id="mojo-movies-section">
@@ -419,7 +419,7 @@
 .mms-poster{flex:0 0 auto;width:240px;border-radius:16px;overflow:hidden;border:1px solid rgba(0,200,255,.2);box-shadow:0 12px 36px rgba(0,0,0,.6);transition:transform .2s;}
 .mms-poster:hover{transform:scale(1.04);}
 .mms-poster img{width:100%;height:340px;object-fit:cover;display:block;}
-@media(max-width:600px){.mms-poster{width:160px;}.mms-poster img{height:228px;}}
+@media(max-width:600px){.mms-poster{width:200px;}.mms-poster img{height:283px;}}
 </style>
 
 <div class="mms-channels-strip">
@@ -522,8 +522,8 @@
 .rv-title{font-size:clamp(1.7rem,3.5vw,2.5rem);font-weight:900;color:#fff;margin-bottom:12px;font-family:'Plus Jakarta Sans','DM Sans',sans-serif;}
 .rv-title span{color:#fd0322;}
 .rv-subtitle{color:rgba(232,224,255,.55);font-size:.9rem;font-family:'Plus Jakarta Sans','DM Sans',sans-serif;}
-.rv-stats{display:flex;flex-wrap:wrap;justify-content:center;gap:14px;margin-bottom:52px;}
-.rv-stat{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.09);border-radius:14px;padding:14px 24px;text-align:center;min-width:100px;}
+.rv-stats{display:flex;flex-wrap:nowrap;justify-content:center;gap:10px;margin-bottom:52px;}
+.rv-stat{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.09);border-radius:14px;padding:12px 16px;text-align:center;min-width:0;flex:1;}
 .rv-stat-num{font-size:1.25rem;font-weight:900;font-family:'Plus Jakarta Sans','DM Sans',sans-serif;}
 .rv-stat-label{font-size:.68rem;color:rgba(232,224,255,.55);margin-top:4px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;font-family:'Plus Jakarta Sans','DM Sans',sans-serif;}
 .rv-block{margin-bottom:56px;}
@@ -816,7 +816,7 @@
     <p class="mojo-pricing-sub">Order now and receive your access by email in minutes</p>
   </div>
   <div class="mojo-dev-wrap">
-    <p class="mojo-dev-label">Select Number of Connections:</p>
+    <p class="mojo-dev-label">Select Number of Connections: <span style="font-weight:500;color:rgba(255,255,255,.45);font-size:.78rem;">1–10, scroll right →</span></p>
     <div class="mojo-dev-scroll"><div class="mojo-dev-row">
       <button class="mojo-dev-btn active" onclick="selectDev(1)" data-dev="1">1 Connection</button>
       <button class="mojo-dev-btn" onclick="selectDev(2)" data-dev="2">2 Connections</button>
