@@ -109,8 +109,221 @@ a{text-decoration:none;color:inherit}
   </div>
 </header>
 <time datetime="2026-07-27" style="font-size:.72rem;color:rgba(232,224,255,.4);display:block;text-align:center;padding:4px 0 0">Last updated: July 2026</time>
-<main>
-  <div class="wrap">
+<main id="content">
+
+  <!-- ════ PLAN CARDS — exact from homepage ════ -->
+  <style>#mojo-pricing{padding:5rem 1.5rem;background:#140c20;position:relative;z-index:10;}
+.mojo-pricing-inner{max-width:1180px;margin:0 auto;}
+.mojo-eyebrow{color:#00c8ff;font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:3px;margin-bottom:.5rem;font-family:'Plus Jakarta Sans','DM Sans',sans-serif;}
+.mojo-pricing-title{color:#fff;font-size:2rem;font-weight:800;margin-bottom:.6rem;font-family:'Plus Jakarta Sans','DM Sans',sans-serif;}
+.mojo-pricing-sub{color:var(--muted);font-size:.95rem;font-family:'Plus Jakarta Sans','DM Sans',sans-serif;}
+.mojo-dev-wrap{margin:2.5rem 0;}
+.mojo-dev-label{color:rgba(255,255,255,.7);font-size:.85rem;font-weight:600;text-align:center;margin-bottom:1rem;font-family:'Plus Jakarta Sans','DM Sans',sans-serif;}
+.mojo-dev-scroll{overflow-x:auto;overflow-y:visible;-webkit-overflow-scrolling:touch;scrollbar-width:none;width:100%;cursor:grab;}
+.mojo-dev-scroll::-webkit-scrollbar{display:none;}
+.mojo-dev-scroll.dragging{cursor:grabbing;user-select:none;}
+.mojo-dev-row{display:inline-flex;gap:8px;flex-wrap:nowrap;justify-content:flex-start;padding:4px 2px 10px;min-width:100%;}
+.mojo-dev-btn{background:var(--red);border:none;color:#fff;padding:12px 24px;border-radius:12px;cursor:pointer;font-size:.85rem;font-weight:800;transition:all .2s;white-space:nowrap;flex-shrink:0;font-family:'Plus Jakarta Sans','DM Sans',sans-serif;}
+.mojo-dev-btn:hover{filter:brightness(1.12);transform:translateY(-1px);}
+.mojo-dev-btn.active{box-shadow:0 0 0 2px #fff,0 0 22px rgba(253,3,34,.55);filter:brightness(1.08);}
+.mojo-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem;margin-top:2rem;}
+.mojo-grid{grid-template-columns:repeat(2,1fr);}
+.mojo-grid{grid-template-columns:1fr;}
+.mojo-pricing-title{font-size:1.6rem;}
+.mojo-card{background:var(--card-bg);border:1px solid var(--border);border-radius:18px;padding:1.6rem 1.25rem;display:flex;flex-direction:column;position:relative;transition:transform .2s,box-shadow .2s;}
+.mojo-card:hover{transform:translateY(-5px);box-shadow:0 16px 40px rgba(0,0,0,.45);}
+.mojo-card.featured{background:linear-gradient(140deg,rgba(253,3,34,.12),rgba(100,0,60,.18));border:2px solid var(--red);box-shadow:0 0 28px rgba(253,3,34,.22);}
+.mojo-card-top{text-align:center;padding-bottom:1.2rem;border-bottom:1px solid var(--border);margin-bottom:1.2rem;}
+.mojo-dur{color:rgba(255,255,255,.55);font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:.5rem;font-family:'Plus Jakarta Sans','DM Sans',sans-serif;}
+.mojo-price{color:#fff;font-size:2.5rem;font-weight:800;line-height:1;font-family:'Plus Jakarta Sans','DM Sans',sans-serif;}
+.mojo-per{color:var(--muted);font-size:.75rem;margin-top:.3rem;font-family:'Plus Jakarta Sans','DM Sans',sans-serif;}
+.mojo-feats{flex:1;margin-bottom:1.5rem;}
+.mojo-feat{display:flex;align-items:flex-start;gap:8px;color:rgba(255,255,255,.75);font-size:.79rem;padding:4px 0;line-height:1.35;font-family:'Plus Jakarta Sans','DM Sans',sans-serif;}
+.mojo-feat .ck{color:var(--green);font-weight:700;flex-shrink:0;}
+.mojo-feat .st{color:var(--gold);flex-shrink:0;}
+.mojo-btn{display:block;text-align:center;padding:13px 16px;border-radius:11px;font-weight:700;font-size:.88rem;transition:all .2s;color:#fff;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);text-decoration:none;font-family:'Plus Jakarta Sans','DM Sans',sans-serif;}
+.mojo-btn:hover{background:var(--red);border-color:var(--red);transform:scale(1.02);}
+.mojo-btn{background:var(--red);border-color:var(--red);box-shadow:0 4px 18px rgba(253,3,34,.4);}
+.mojo-btn:hover{background:#c50018;}
+</style>
+  <div id="mojo-pricing">
+<div class="mojo-pricing-inner">
+  <div style="text-align:center;margin-bottom:2rem;">
+    <p class="mojo-eyebrow">Beste IPTV Norge — Recommended IPTV Norway Packages</p>
+    <h2 class="mojo-pricing-title">IPTV Norway Subscription Plans</h2>
+    <p class="mojo-pricing-sub">Order your <strong>IPTV Norway</strong> subscription now and receive your access by email in minutes. Compatible with IPTV Smarters Pro, Smart IPTV, GSE IPTV &amp; all apps.</p>
+  </div>
+  <div class="mojo-dev-wrap">
+    <p class="mojo-dev-label">Select Number of Connections: <span style="font-weight:500;color:rgba(255,255,255,.45);font-size:.78rem;">1–10, scroll right →</span></p>
+    <div class="mojo-dev-scroll"><div class="mojo-dev-row">
+      <button class="mojo-dev-btn active" onclick="selectDev(1)" data-dev="1">1 Connection</button>
+      <button class="mojo-dev-btn" onclick="selectDev(2)" data-dev="2">2 Connections</button>
+      <button class="mojo-dev-btn" onclick="selectDev(3)" data-dev="3">3 Connections</button>
+      <button class="mojo-dev-btn" onclick="selectDev(4)" data-dev="4">4 Connections</button>
+      <button class="mojo-dev-btn" onclick="selectDev(5)" data-dev="5">5 Connections</button>
+      <button class="mojo-dev-btn" onclick="selectDev(6)" data-dev="6">6 Connections</button>
+      <button class="mojo-dev-btn" onclick="selectDev(7)" data-dev="7">7 Connections</button>
+      <button class="mojo-dev-btn" onclick="selectDev(8)" data-dev="8">8 Connections</button>
+      <button class="mojo-dev-btn" onclick="selectDev(9)" data-dev="9">9 Connections</button>
+      <button class="mojo-dev-btn" onclick="selectDev(10)" data-dev="10">10 Connections</button>
+    </div></div>
+  </div>
+  <div class="mojo-grid">
+    <div class="mojo-card">
+      <div class="mojo-card-top">
+        <p class="mojo-dur">1 Month</p>
+        <div class="mojo-price" id="price-1month">€9</div>
+        <p class="mojo-per" id="per-1month">for 1 Connection</p>
+      </div>
+      <ul class="mojo-feats">
+        <li class="mojo-feat"><span class="ck">✓</span>4K Quality</li>
+        <li class="mojo-feat"><span class="ck">✓</span>NRK, TV2 &amp; All Norwegian Channels</li>
+        <li class="mojo-feat"><span class="ck">✓</span>PPV, UFC, BOXING, F1, SUPERBOWL</li>
+        <li class="mojo-feat"><span class="ck">✓</span>NBA, NHL, NFL Packages</li>
+        <li class="mojo-feat"><span class="ck">✓</span>+50,000 Channels + Netflix</li>
+        <li class="mojo-feat"><span class="ck">✓</span>+300,000 Movies &amp; Series (VOD)</li>
+        <li class="mojo-feat"><span class="ck">✓</span>UPDATED Series and Movies (2026)</li>
+        <li class="mojo-feat"><span class="ck">✓</span>100% Secure</li>
+        <li class="mojo-feat"><span class="ck">✓</span>Support All Devices</li>
+        <li class="mojo-feat"><span class="ck">✓</span>Catch-up &amp; EPG</li>
+        <li class="mojo-feat"><span class="ck">✓</span>No Freezing</li>
+      </ul>
+      <a class="mojo-btn" id="btn-1month" href="iptv-1-month-1-connection.html">Order Now →</a>
+    </div>
+    <div class="mojo-card">
+      <div class="mojo-card-top">
+        <p class="mojo-dur">3 Months</p>
+        <div class="mojo-price" id="price-3months">€29</div>
+        <p class="mojo-per" id="per-3months">for 1 Connection</p>
+      </div>
+      <ul class="mojo-feats">
+        <li class="mojo-feat"><span class="ck">✓</span>4K Quality</li>
+        <li class="mojo-feat"><span class="ck">✓</span>NRK, TV2 &amp; All Norwegian Channels</li>
+        <li class="mojo-feat"><span class="ck">✓</span>PPV, UFC, BOXING, F1, SUPERBOWL</li>
+        <li class="mojo-feat"><span class="ck">✓</span>NBA, NHL, NFL Packages</li>
+        <li class="mojo-feat"><span class="ck">✓</span>+50,000 Channels + Netflix</li>
+        <li class="mojo-feat"><span class="ck">✓</span>+300,000 Movies &amp; Series (VOD)</li>
+        <li class="mojo-feat"><span class="ck">✓</span>UPDATED Series and Movies (2026)</li>
+        <li class="mojo-feat"><span class="ck">✓</span>100% Secure</li>
+        <li class="mojo-feat"><span class="ck">✓</span>Support All Devices</li>
+        <li class="mojo-feat"><span class="ck">✓</span>Catch-up &amp; EPG</li>
+        <li class="mojo-feat"><span class="ck">✓</span>No Freezing</li>
+      </ul>
+      <a class="mojo-btn" id="btn-3months" href="iptv-3-months-1-connection.html">Order Now →</a>
+    </div>
+    <div class="mojo-card">
+      <div class="mojo-card-top">
+        <p class="mojo-dur">6 Months</p>
+        <div class="mojo-price" id="price-6months">€39</div>
+        <p class="mojo-per" id="per-6months">for 1 Connection</p>
+      </div>
+      <ul class="mojo-feats">
+        <li class="mojo-feat"><span class="ck">✓</span>4K Quality</li>
+        <li class="mojo-feat"><span class="ck">✓</span>NRK, TV2 &amp; All Norwegian Channels</li>
+        <li class="mojo-feat"><span class="ck">✓</span>PPV, UFC, BOXING, F1, SUPERBOWL</li>
+        <li class="mojo-feat"><span class="ck">✓</span>NBA, NHL, NFL Packages</li>
+        <li class="mojo-feat"><span class="ck">✓</span>+50,000 Channels + Netflix</li>
+        <li class="mojo-feat"><span class="ck">✓</span>+300,000 Movies &amp; Series (VOD)</li>
+        <li class="mojo-feat"><span class="ck">✓</span>UPDATED Series and Movies (2026)</li>
+        <li class="mojo-feat"><span class="ck">✓</span>100% Secure</li>
+        <li class="mojo-feat"><span class="ck">✓</span>Support All Devices</li>
+        <li class="mojo-feat"><span class="ck">✓</span>Catch-up &amp; EPG</li>
+        <li class="mojo-feat"><span class="ck">✓</span>No Freezing</li>
+      </ul>
+      <a class="mojo-btn" id="btn-6months" href="iptv-6-months-1-connection.html">Order Now →</a>
+    </div>
+    <div class="mojo-card featured">
+      <div class="mojo-badge-tag">BEST VALUE</div>
+      <div class="mojo-card-top">
+        <p class="mojo-dur">1 Year</p>
+        <div class="mojo-price" id="price-1year">€49</div>
+        <p class="mojo-per" id="per-1year">for 1 Connection</p>
+      </div>
+      <ul class="mojo-feats">
+        <li class="mojo-feat mojo-ibo"><span class="st">⭐</span><strong>IBO Player Subscription for Free</strong></li>
+        <li class="mojo-feat"><span class="ck">✓</span>4K Quality</li>
+        <li class="mojo-feat"><span class="ck">✓</span>NRK, TV2 &amp; All Norwegian Channels</li>
+        <li class="mojo-feat"><span class="ck">✓</span>PPV, UFC, BOXING, F1, SUPERBOWL</li>
+        <li class="mojo-feat"><span class="ck">✓</span>NBA, NHL, NFL Packages</li>
+        <li class="mojo-feat"><span class="ck">✓</span>+50,000 Channels + Netflix</li>
+        <li class="mojo-feat"><span class="ck">✓</span>+300,000 Movies &amp; Series (VOD)</li>
+        <li class="mojo-feat"><span class="ck">✓</span>UPDATED Series and Movies (2026)</li>
+        <li class="mojo-feat"><span class="ck">✓</span>100% Secure</li>
+        <li class="mojo-feat"><span class="ck">✓</span>Support All Devices</li>
+        <li class="mojo-feat"><span class="ck">✓</span>Catch-up &amp; EPG</li>
+        <li class="mojo-feat"><span class="ck">✓</span>No Freezing</li>
+      </ul>
+      <a class="mojo-btn" id="btn-1year" href="iptv-12-months-1-connection.html">Order Now →</a>
+    </div>
+  </div>
+</div>
+</div>
+  <script>
+(function(){
+  function attachDevBtns(){
+    document.querySelectorAll('.mojo-dev-btn').forEach(function(btn){
+      btn.addEventListener('click',function(e){e.stopPropagation();selectDev(parseInt(this.getAttribute('data-dev'),10));});
+      btn.addEventListener('touchend',function(e){e.preventDefault();e.stopPropagation();selectDev(parseInt(this.getAttribute('data-dev'),10));},{passive:false});
+    });
+  }
+  if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',attachDevBtns);}else{attachDevBtns();}
+
+// Drag-to-scroll for connection selector
+(function(){
+  function initDragScroll(el){
+    var isDragging=false,startX=0,scrollLeft=0,moved=false;
+    el.addEventListener('mousedown',function(e){
+      isDragging=true;moved=false;
+      startX=e.pageX-el.offsetLeft;
+      scrollLeft=el.scrollLeft;
+      el.classList.add('dragging');
+    });
+    document.addEventListener('mousemove',function(e){
+      if(!isDragging)return;
+      e.preventDefault();
+      var x=e.pageX-el.offsetLeft;
+      var walk=(x-startX)*1.2;
+      if(Math.abs(walk)>4)moved=true;
+      el.scrollLeft=scrollLeft-walk;
+    });
+    document.addEventListener('mouseup',function(){
+      isDragging=false;
+      el.classList.remove('dragging');
+    });
+    // Prevent button click if we dragged
+    el.addEventListener('click',function(e){
+      if(moved){e.stopPropagation();e.preventDefault();moved=false;}
+    },true);
+  }
+  var scroller=document.querySelector('.mojo-dev-scroll');
+  if(scroller)initDragScroll(scroller);
+})();
+})();
+var PRICES={1:[9,29,39,49],2:[18,50,69,89],3:[27,75,105,135],4:[36,99,140,180],5:[45,120,175,225],6:[54,144,210,270],7:[63,168,245,315],8:[72,192,280,360],9:[81,216,315,405],10:[90,240,350,450]};
+var currDev=1;
+var DUR_KEYS=['1month','3months','6months','1year'];
+var DUR_SLUGS=['1-month','3-months','6-months','12-months'];
+function selectDev(n){
+  currDev=n;
+  document.querySelectorAll('.mojo-dev-btn').forEach(function(b){b.classList.remove('active');});
+  var a=document.querySelector('.mojo-dev-btn[data-dev="'+n+'"]');
+  if(a)a.classList.add('active');
+  var p=PRICES[n];
+  var cs=n===1?'-connection':'-connections';
+  for(var i=0;i<DUR_KEYS.length;i++){
+    var k=DUR_KEYS[i];
+    var pe=document.getElementById('price-'+k);
+    var pp=document.getElementById('per-'+k);
+    var be=document.getElementById('btn-'+k);
+    if(pe)pe.textContent='€'+p[i];
+    if(pp)pp.textContent='for '+n+(n===1?' Connection':' Connections');
+    if(be)be.href='iptv-'+DUR_SLUGS[i]+'-'+n+cs+'.html';
+  }
+}
+</script>
+
+  <!-- ════ SEO CONTENT ════ -->
+  <div class="wrap" style="padding-top:3rem;padding-bottom:3rem">
     <article class="content">
 <h2>IPTV Norway Plans — Find Your Perfect Package</h2><p>NorwayIPTV offers four flexible subscription lengths for every need — from a one-month trial to a full year of premium <strong>IPTV Norway</strong> access. Every plan includes the exact same service: 50,000+ live channels, 300,000+ on-demand titles, <strong>IPTV Premier League</strong>, Eliteserien, all PPV events, 4K IPTV quality and 24/7 WhatsApp support. Choose your duration and number of simultaneous connections.</p><h2>1 Month IPTV Norway — from €9</h2><p>The <strong>1-month IPTV Norway</strong> plan is perfect for trying the full service or for seasonal sports fans. No commitment — pay only for the months you need. Starts at <strong>€9 for 1 connection</strong> and scales to €90 for 10 simultaneous connections. <a href="iptv-1-month-1-connection.html">View 1-month plans &rarr;</a></p><h2>3 Months IPTV Norway — from €29</h2><p>The <strong>3-month IPTV Norway</strong> plan covers a full sports season — ideal for <strong>IPTV Premier League</strong>, Eliteserien and Champions League. Starts at <strong>€29 for 1 connection</strong> (€9.67/mo). <a href="iptv-3-months-1-connection.html">View 3-month plans &rarr;</a></p><h2>6 Months IPTV Norway — from €39</h2><p>The <strong>6-month IPTV Norway</strong> plan offers our best value below the annual plan. Ideal for expats and Norwegians abroad. Starts at <strong>€39 for 1 connection</strong> (€6.50/mo). <a href="iptv-6-months-1-connection.html">View 6-month plans &rarr;</a></p><h2>12 Months IPTV Norway — from €49 (Best Value)</h2><p>The <strong>12-month IPTV Norway</strong> plan is the lowest cost per month in our lineup. Includes a free IBO Player Pro subscription. Starts at <strong>€49 for 1 connection</strong> (€4.08/mo). <a href="iptv-12-months-1-connection.html">View 12-month plans &rarr;</a></p><h2>What Is Included in Every Plan</h2><p>All NorwayIPTV plans include: NRK1, NRK2, NRK3, TV2, Viaplay, TVNorge, MAX and all Norwegian channels; full Nordic IPTV (Swedish, Danish, Finnish); <strong>IPTV Premier League</strong>, Eliteserien, Champions League, UFC, F1, NBA and all PPV events; 50,000+ international channels; 300,000+ VOD titles; 4K IPTV quality; full IPTV EIT/EPG guide; and 24/7 WhatsApp support. No add-ons, no hidden fees.</p><h2>Compatible With All IPTV Players</h2><p>NorwayIPTV uses standard Xtream Codes and M3U — compatible with <strong>IPTV Smarters Pro</strong>, GSE Smart IPTV, Smart IPTV (Samsung/LG), NET IPTV, SET IPTV, IPTV Smart Player, IPTV Rapid, GS IPTV, Chromecast IPTV and every M3U player on Firestick, Android, iPhone, Apple TV, PC and Mac.</p>
 <div class="cta-box" style="text-align:left">
@@ -128,6 +341,7 @@ a{text-decoration:none;color:inherit}
 </div>
     </article>
   </div>
+
 </main>
 <footer class="mojo-footer">
   <div class="footer-links">
