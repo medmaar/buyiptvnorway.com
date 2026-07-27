@@ -1,3 +1,13 @@
 User-agent: *
 Allow: /
+Disallow: /go/
+
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 2
+
 Sitemap: https://buyiptvnorway.com/sitemap.xml
