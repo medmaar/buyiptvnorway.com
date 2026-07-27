@@ -172,6 +172,16 @@ a{text-decoration:none;color:inherit}
 @media(max-width:600px){.wa-float{width:52px;height:52px;right:16px;bottom:16px}}
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is there a contract or automatic renewal?","acceptedAnswer":{"@type":"Answer","text":"No contracts and no automatic renewals. One-time payment — renew only when and if you choose."}},{"@type":"Question","name":"How do I receive my IPTV Norway credentials?","acceptedAnswer":{"@type":"Answer","text":"After your order our team sends your M3U link or Xtream Codes to your email or WhatsApp within minutes — 24/7, including weekends."}},{"@type":"Question","name":"What does &ldquo;10 connections&rdquo; mean?","acceptedAnswer":{"@type":"Answer","text":"10 connections = 10 devices can stream simultaneously, each on a different channel. Install on as many devices as you like."}},{"@type":"Question","name":"Does NorwayIPTV work with IPTV Smarters Pro?","acceptedAnswer":{"@type":"Answer","text":"Yes — fully compatible with IPTV Smarters Pro, GSE Smart IPTV, Smart IPTV, NET IPTV, SET IPTV, IPTV Smart Player, GS IPTV, Chromecast IPTV and any M3U player."}},{"@type":"Question","name":"What channels are included?","acceptedAnswer":{"@type":"Answer","text":"NRK1, NRK2, NRK3, TV2, TVNorge, MAX, Viaplay, TV2 Sport plus 50,000+ international channels in HD and 4K. Full Nordic IPTV — Norwegian, Swedish, Danish and Finnish channels."}},{"@type":"Question","name":"Is IPTV Premier League included?","acceptedAnswer":{"@type":"Answer","text":"Yes. IPTV Premier League, Eliteserien, Champions League, La Liga, NFL, NBA, NHL, UFC, Boxing and F1 — all included at no extra charge."}},{"@type":"Question","name":"Is there a free IPTV trial?","acceptedAnswer":{"@type":"Answer","text":"Yes — free 24-hour trial with full access. Request your free IPTV trial here. No credit card required."}}]}</script>
+<style>.sales-banner{position:fixed;left:18px;bottom:18px;z-index:79;max-width:300px;display:flex;align-items:center;gap:12px;padding:14px 34px 14px 14px;border-radius:14px;background:linear-gradient(135deg,#fd0322 0%,#c50018 100%);border:none;box-shadow:0 8px 40px rgba(253,3,34,.55),0 2px 12px rgba(0,0,0,.4),0 0 0 1px rgba(255,255,255,.12);transform:translateY(140%);opacity:0;transition:transform .4s cubic-bezier(.4,0,.2,1),opacity .4s cubic-bezier(.4,0,.2,1);}
+.sales-banner.show{transform:translateY(0);opacity:1;}
+.sales-banner-icon{flex-shrink:0;width:36px;height:36px;border-radius:10px;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.88);border:none;}
+.sales-banner-title{font-weight:700;font-size:12.5px;line-height:1.4;color:#fff;font-family:'Plus Jakarta Sans',sans-serif;}
+.sales-banner-title b{color:#fff;font-weight:900;}
+.sales-banner-text{font-size:10.5px;color:rgba(255,255,255,.75);margin-top:3px;display:flex;align-items:center;gap:4px;font-family:'Plus Jakarta Sans',sans-serif;}
+.sales-banner-text::before{content:"";width:6px;height:6px;border-radius:50%;background:#fff;display:inline-block;flex-shrink:0;}
+.sales-banner-close{position:absolute;top:6px;right:8px;background:none;border:none;color:rgba(255,255,255,.6);font-size:14px;line-height:1;cursor:pointer;padding:3px;}
+.sales-banner-close:hover{color:#fff;}
+@media(max-width:600px){.sales-banner{left:12px;bottom:12px;max-width:calc(100% - 96px);padding:12px 28px 12px 12px;}}</style>
 </head>
 <body>
 <a href="#content" class="sr-only">Skip to main content</a>
@@ -589,4 +599,42 @@ function submitForm(e){
   phoneInit('tf-country','tf-whatsapp');
   phoneInit('f-country','f-whatsapp');
 })();</script>
+<div class="sales-banner" id="salesBanner">
+  <button class="sales-banner-close" id="salesBannerClose" aria-label="Close">&times;</button>
+  <div class="sales-banner-icon">
+    <svg viewBox="0 0 24 24" width="18" height="18" fill="none"><path d="M6 7h12l-1 12.5a2 2 0 0 1-2 1.8H9a2 2 0 0 1-2-1.8L6 7z" stroke="#fd0322" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 7V6a3 3 0 0 1 6 0v1" stroke="#fd0322" stroke-width="1.6" stroke-linecap="round"/><path d="M9.5 12.5l1.8 1.8L14.8 11" stroke="#fd0322" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </div>
+  <div class="sales-banner-body">
+    <div class="sales-banner-title" id="salesBannerTitle">New purchase</div>
+    <div class="sales-banner-text" id="salesBannerText">just now</div>
+  </div>
+</div>
+<script>
+
+(function(){
+  var banner=document.getElementById('salesBanner'),closeBtn=document.getElementById('salesBannerClose'),titleEl=document.getElementById('salesBannerTitle'),textEl=document.getElementById('salesBannerText');
+  if(!banner||!titleEl||!textEl) return;
+  if(sessionStorage.getItem('nin_sales_dismissed')==='1') return;
+  var names=["Erik","Lars","Mats","Knut","Tor","Bjorn","Sven","Anders","Petter","Ole","Ingrid","Astrid","Marit","Sigrid","Kari","Hilde","Silje","Tone","Bente","Anne"];
+  var cities=["Oslo","Bergen","Trondheim","Stavanger","Kristiansand","Drammen","Fredrikstad","Sarpsborg","Sandnes","Tromso","Bodo","Alesund","Hamar","Lillehammer","Molde","Arendal","Halden","Larvik","Sandefjord","Gjovik"];
+  var plans=["1-Month Plan","3-Month Plan","3-Month Plan","6-Month Plan","6-Month Plan","12-Month Plan","12-Month Plan","12-Month Plan","12-Month Plan","12-Month Plan"];
+  var timeAgo=["just now","2 minutes ago","5 minutes ago","9 minutes ago"];
+  var flagSVG='<svg width="16" height="11" viewBox="0 0 22 16" style="border-radius:2px;vertical-align:middle;display:inline-block;margin-right:5px;flex-shrink:0;box-shadow:0 0 0 1px #fff;"><rect width="22" height="16" fill="#EF2B2D"/><rect x="6" width="4" height="16" fill="#fff"/><rect y="6" width="22" height="4" fill="#fff"/><rect x="7" width="2" height="16" fill="#002868"/><rect y="7" width="22" height="2" fill="#002868"/></svg>';
+  function pick(arr){return arr[Math.floor(Math.random()*arr.length)];}
+  var dismissed=false,lastName=null;
+  function nextNotification(){
+    var name=pick(names);while(name===lastName){name=pick(names);}lastName=name;
+    titleEl.innerHTML=flagSVG+'<b>'+name+'</b> from '+pick(cities)+' just purchased a '+pick(plans);
+    textEl.textContent=pick(timeAgo);
+  }
+  function cycle(){
+    if(dismissed) return;
+    nextNotification();banner.classList.add('show');
+    setTimeout(function(){if(dismissed) return;banner.classList.remove('show');setTimeout(cycle,3000);},5000);
+  }
+  setTimeout(cycle,2000+Math.floor(Math.random()*2000));
+  if(closeBtn){closeBtn.addEventListener('click',function(){dismissed=true;banner.classList.remove('show');sessionStorage.setItem('nin_sales_dismissed','1');});}
+})();
+
+</script>
 </body></html>
