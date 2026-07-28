@@ -297,10 +297,10 @@ img:is([sizes="auto" i], [sizes^="auto," i]) { contain-intrinsic-size: 3000px 15
 .rv-title{font-size:clamp(1.7rem,3.5vw,2.5rem);font-weight:900;color:#fff;margin-bottom:12px;font-family:'Plus Jakarta Sans','DM Sans',sans-serif;}
 .rv-title span{color:#fd0322;}
 .rv-subtitle{color:rgba(232,224,255,.55);font-size:.9rem;font-family:'Plus Jakarta Sans','DM Sans',sans-serif;}
-.rv-stats{display:flex;flex-wrap:nowrap;justify-content:center;gap:10px;margin-bottom:52px;}
-.rv-stat{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.09);border-radius:14px;padding:12px 16px;text-align:center;min-width:0;flex:1;}
-.rv-stat-num{font-size:1.25rem;font-weight:900;font-family:'Plus Jakarta Sans','DM Sans',sans-serif;}
-.rv-stat-label{font-size:.68rem;color:rgba(232,224,255,.55);margin-top:4px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;font-family:'Plus Jakarta Sans','DM Sans',sans-serif;}
+.rv-stats{display:flex;flex-wrap:nowrap;justify-content:center;gap:8px;margin-bottom:52px;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding-bottom:4px;}
+.rv-stat{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.09);border-radius:12px;padding:10px 8px;text-align:center;flex:1;min-width:60px;max-width:80px;}
+.rv-stat-num{font-size:1.15rem;font-weight:900;font-family:'Plus Jakarta Sans','DM Sans',sans-serif;line-height:1.2;}
+.rv-stat-label{font-size:.6rem;color:rgba(232,224,255,.55);margin-top:3px;font-weight:600;letter-spacing:.03em;text-transform:uppercase;font-family:'Plus Jakarta Sans','DM Sans',sans-serif;white-space:nowrap;}
 .rv-block{margin-bottom:56px;}
 .rv-block-head{display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:24px;}
 .rv-carousel{position:relative;overflow:hidden;}
@@ -807,7 +807,8 @@ img:is([sizes="auto" i], [sizes^="auto," i]) { contain-intrinsic-size: 3000px 15
   </div>
   <div class="rv-stats">
     <div class="rv-stat"><div class="rv-stat-num" style="color:#00b67a;">5.0</div><div class="rv-stat-label">Trustpilot</div></div>
-    <div class="rv-stat"><div class="rv-stat-num" style="color:#00e5ff;">10,000+</div><div class="rv-stat-label">Customers · 99.5% Uptime</div></div>
+    <div class="rv-stat"><div class="rv-stat-num" style="color:#00e5ff;">10K+</div><div class="rv-stat-label">Customers</div></div>
+    <div class="rv-stat"><div class="rv-stat-num" style="color:#00e5ff;">99.5%</div><div class="rv-stat-label">Uptime</div></div>
     <div class="rv-stat"><div class="rv-stat-num" style="color:#FBBC04;">4.9★</div><div class="rv-stat-label">Google</div></div>
     <div class="rv-stat"><div class="rv-stat-num" style="color:#fd0322;">24/7</div><div class="rv-stat-label">Support</div></div>
   </div>
@@ -1850,18 +1851,7 @@ function selectDev(n){
     <div class="sales-banner-title" id="salesBannerTitle">New purchase</div>
     <div class="sales-banner-text" id="salesBannerText">just now</div>
   </div>
-
-    <a href="se-fotball-pa-nett.html" class="kw-index-tag">Se Fotball på Nett</a>
-    <a href="iptv-abonnement-norge.html" class="kw-index-tag">IPTV Abonnement Norge</a>
-    <a href="gratis-iptv-proveperiode.html" class="kw-index-tag">Gratis IPTV Prøveperiode</a>
-    <a href="iptv-kanalpakke-norge.html" class="kw-index-tag">IPTV Kanalpakke Norge</a>
-    <a href="iptv-vs-viaplay-norge.html" class="kw-index-tag">IPTV vs Viaplay</a>
-    <a href="iptv-lovlig-norge.html" class="kw-index-tag">IPTV Lovlig Norge</a>
-    <a href="beste-iptv-app-norge.html" class="kw-index-tag">Beste IPTV App Norge</a>
-    <a href="iptv-m3u-norway.html" class="kw-index-tag">IPTV M3U Norway</a>
-    <a href="iptv-apple-tv-norway.html" class="kw-index-tag">IPTV Apple TV Norway</a>
-    <a href="iptv-lg-tv-norway.html" class="kw-index-tag">IPTV LG TV Norway</a>
-  </div>
+</div>
 <script>
 (function(){
   var banner=document.getElementById('salesBanner'),closeBtn=document.getElementById('salesBannerClose'),titleEl=document.getElementById('salesBannerTitle'),textEl=document.getElementById('salesBannerText');
