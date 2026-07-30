@@ -555,7 +555,7 @@ a{text-decoration:none;color:inherit}
   <svg viewBox="0 0 32 32" width="30" height="30" fill="#fff"><path d="M16.02 3C9.4 3 4 8.4 4 15.02c0 2.36.66 4.57 1.8 6.46L4 29l7.7-1.75a11.98 11.98 0 004.32.8h.01c6.62 0 12.02-5.4 12.02-12.02C28.05 8.4 22.65 3 16.02 3zm0 21.9h-.01a9.9 9.9 0 01-5.05-1.38l-.36-.21-4.57 1.04 1.06-4.45-.24-.38a9.86 9.86 0 01-1.5-5.5c0-5.47 4.45-9.92 9.93-9.92 2.65 0 5.14 1.03 7.01 2.91a9.85 9.85 0 012.9 7.02c0 5.47-4.45 9.87-9.87 9.87zm5.44-7.4c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.24-.46-2.36-1.46-.87-.78-1.46-1.74-1.63-2.04-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.87 1.22 3.07.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.7.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35z"/></svg>
 </a>
 <script>
-function submitTrial(e){
+async function submitTrial(e){
   e.preventDefault();
   var btn=document.getElementById('tf-btn'),err=document.getElementById('tf-err'),suc=document.getElementById('tf-suc'),area=document.getElementById('tf-form-area');
   btn.disabled=true;btn.textContent='Sending…';err.style.cssText='display:none!important';
@@ -563,21 +563,14 @@ function submitTrial(e){
   function reset(msg){btn.disabled=false;btn.textContent='Request Free Trial →';err.style.cssText='display:block!important;padding:12px;background:rgba(253,3,34,.12);border:1px solid rgba(253,3,34,.4);border-radius:10px;color:#ff6070;font-size:.83rem;margin-top:10px;';err.textContent=msg;}
   var n=gv('tf-name'),em=gv('tf-email'),co=gv('tf-country'),wa=gv('tf-whatsapp'),dv=gv('tf-device'),nt=gv('tf-notes');
   if(!n.trim()||!em.trim()){reset('Please enter your name and email address.');return;}
-  var timer=setTimeout(function(){reset('Timed out. Please try again.');},25000);
-  function showOK(){clearTimeout(timer);area.style.display='none';suc.style.display='block';suc.innerHTML='<div style="font-size:3rem;margin-bottom:.75rem">&#9989;</div><h3 style="color:#2ecc71;font-size:1.5rem;font-weight:900;margin-bottom:.5rem">Your Trial is Active!</h3><p style="color:rgba(255,255,255,.8);line-height:1.7">Credentials sent to <strong>'+em+'</strong>.<br>Check your inbox or WhatsApp — your 24H access starts now.</p><a href="pricing.html" style="display:inline-block;margin-top:1.25rem;padding:11px 24px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.1);border-radius:10px;color:#fff;font-weight:700;font-size:.88rem">View Paid Plans</a>';}
-  fetch('https://iptv-trial-buyiptvnorway.medmaar.workers.dev',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({name:n,email:em,country:co,device:dv,whatsapp:wa,notes:nt,site:'NorwayIPTV'})})
-  .then(function(r){return r.json();}).then(function(d){if(d.success){showOK();}else{fallback();}}).catch(function(){fallback();});
-  function fallback(){
-    clearTimeout(timer);
-    fetch('https://api.emailjs.com/api/v1.0/email/send',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({service_id:'service_kq5mctq',template_id:'template_etsvk9u',user_id:'D8T9YZsyUKNtJRT4D',template_params:{site_name:'NorwayIPTV',plan:'Free 24H Trial',name:n||'Anonymous',from_name:n||'Anonymous',from_email:em||'contact@buyiptvnorway.com',reply_to:em||'contact@buyiptvnorway.com',phone:wa||'-',country:co||'-',device:dv||'-',message:'NorwayIPTV Free Trial
-Name: '+(n||'-')+'
-Email: '+(em||'-')+'
-Country: '+(co||'-')+'
-WhatsApp: '+(wa||'-')+'
-Device: '+(dv||'-')+'
-Notes: '+(nt||'-')}})})
-    .then(function(r){if(r.ok){showOK();}else{reset('Submission failed. Contact us on WhatsApp.');};}).catch(function(){reset('Network error. Contact us on WhatsApp.');});
-  }
+  try{
+    var r=await fetch('https://iptv-trial-buyiptvnorway.medmaar.workers.dev',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({name:n,email:em,country:co,device:dv,whatsapp:wa,notes:nt})});
+    var d=await r.json();
+    if(r.ok&&d.success){
+      area.style.display='none';suc.style.display='block';
+      suc.innerHTML='<div style="font-size:3rem;margin-bottom:.75rem">✅</div><h3 style="color:#2ecc71;font-size:1.5rem;font-weight:900;margin-bottom:.5rem">Your Trial is Active!</h3><p style="color:rgba(255,255,255,.8);line-height:1.7">Credentials sent to <strong>'+em+'</strong>.<br>Check your <strong>inbox</strong> now (and spam folder too).</p><a href="pricing.html" style="display:inline-block;margin-top:1.25rem;padding:11px 24px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.1);border-radius:10px;color:#fff;font-weight:700;font-size:.88rem">View Paid Plans</a>';
+    }else{reset('Submission failed. Please try again or contact us on WhatsApp.');}
+  }catch(ex){reset('Network error. Please try again or contact us: contact@buyiptvnorway.com');console.error(ex);}
 }
 </script>
 <script>
