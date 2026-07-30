@@ -569,7 +569,7 @@ function submitTrial(e){
   .then(function(r){return r.json();}).then(function(d){if(d.success){showOK();}else{fallback();}}).catch(function(){fallback();});
   function fallback(){
     clearTimeout(timer);
-    fetch('https://api.emailjs.com/api/v1.0/email/send',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({service_id:'service_pk6jnu9',template_id:'template_763fwro',user_id:'5NnfSkeYa9aonxpMe',template_params:{site_name:'NorwayIPTV',plan:'Free 24H Trial',name:n||'Anonymous',from_name:n||'Anonymous',from_email:em||'contact@buyiptvnorway.com',reply_to:em||'contact@buyiptvnorway.com',phone:wa||'-',country:co||'-',device:dv||'-',message:'NorwayIPTV Free Trial
+    fetch('https://api.emailjs.com/api/v1.0/email/send',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({service_id:'service_kq5mctq',template_id:'template_etsvk9u',user_id:'D8T9YZsyUKNtJRT4D',template_params:{site_name:'NorwayIPTV',plan:'Free 24H Trial',name:n||'Anonymous',from_name:n||'Anonymous',from_email:em||'contact@buyiptvnorway.com',reply_to:em||'contact@buyiptvnorway.com',phone:wa||'-',country:co||'-',device:dv||'-',message:'NorwayIPTV Free Trial
 Name: '+(n||'-')+'
 Email: '+(em||'-')+'
 Country: '+(co||'-')+'

@@ -585,7 +585,7 @@ function submitForm(e){
   var timer=setTimeout(function(){fb('Timed out. Use WhatsApp below.');},20000);
   function ok(){clearTimeout(timer);area.style.display='none';suc.style.display='block';}
   function fb(r){clearTimeout(timer);err.setAttribute('style','display:block!important;padding:12px;background:rgba(253,3,34,.12);border:1px solid rgba(253,3,34,.4);border-radius:10px;color:#ff6070;font-size:.83rem;margin-top:10px;');err.textContent=r;waW.style.display='block';btn.disabled=false;btn.textContent='Submit Order';}
-  fetch('https://api.emailjs.com/api/v1.0/email/send',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({service_id:'service_pk6jnu9',template_id:'template_763fwro',user_id:'5NnfSkeYa9aonxpMe',template_params:{site_name:'NorwayIPTV',plan:PLAN_INFO,name:n||'Anonymous',from_name:n||'Anonymous',from_email:em||'contact@buyiptvnorway.com',reply_to:em||'contact@buyiptvnorway.com',phone:wa||'-',country:co||'-',device:dv||'-',message:msg}})}
+  fetch('https://api.emailjs.com/api/v1.0/email/send',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({service_id:'service_kq5mctq',template_id:'template_etsvk9u',user_id:'D8T9YZsyUKNtJRT4D',template_params:{site_name:'NorwayIPTV',plan:PLAN_INFO,name:n||'Anonymous',from_name:n||'Anonymous',from_email:em||'contact@buyiptvnorway.com',reply_to:em||'contact@buyiptvnorway.com',phone:wa||'-',country:co||'-',device:dv||'-',message:msg}})}
   ).then(function(r){if(r.ok)ok();else fb('Error '+r.status+'.');}).catch(function(){fb('Network error. Use WhatsApp below.');});
 }
 </script>
