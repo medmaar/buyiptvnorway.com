@@ -226,7 +226,7 @@ a{text-decoration:none;color:inherit}
     <form onsubmit="submitForm(event)" novalidate>
       <div class="mf-grid">
         <div class="mf-field"><label class="mf-label" for="f-name">Full Name</label><input class="mf-input" id="f-name" type="text" placeholder="Your full name" autocomplete="name"></div>
-        <div class="mf-field"><label class="mf-label" for="f-email">Email Address</label><input class="mf-input" id="f-email" type="email" placeholder="your@email.com" autocomplete="email"></div>
+        <div class="mf-field"><label class="mf-label" for="f-email">Email Address</label><input class="mf-input" id="f-email" type="email" placeholder="contact@buyiptvnorway.com" autocomplete="email"></div>
       </div>
       <div class="mf-grid">
         <div class="mf-field"><label class="mf-label" for="f-country">Country</label>
@@ -558,7 +558,7 @@ a{text-decoration:none;color:inherit}
     <div class="footer-top">
       <div class="footer-brand">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 44" height="44" style="display:block;overflow:visible;"><defs><clipPath id="nlc2"><circle cx="22" cy="22" r="20"/></clipPath></defs><circle cx="22" cy="22" r="20" fill="#fff"/><path clip-path="url(#nlc2)" fill="#EF2B2D" d="M2,22 C8,5 36,39 42,22 L42,2 L2,2 Z"/><path clip-path="url(#nlc2)" fill="#002868" d="M2,30 C8,13 36,47 42,30 L42,44 L2,44 Z"/><circle cx="22" cy="22" r="20" fill="none" stroke="rgba(255,255,255,0.35)" stroke-width="1.5"/><text y="30" font-family="'Plus Jakarta Sans',Arial,sans-serif" font-weight="800" font-size="23" letter-spacing="-0.5"><tspan x="50" fill="#ffffff">Norway</tspan><tspan fill="#fd0322">IPTV</tspan></text></svg>
-        <div class="footer-brand-text">Beste IPTV Norge &mdash; Nordic IPTV Service<br><a href="mailto:support@buyiptvnorway.com">support@buyiptvnorway.com</a></div>
+        <div class="footer-brand-text">Beste IPTV Norge &mdash; Nordic IPTV Service<br><a href="mailto:contact@buyiptvnorway.com">contact@buyiptvnorway.com</a></div>
       </div>
       <div class="footer-cols">
         <div class="footer-col"><h5>Service</h5><a href="index.html">Home</a><a href="pricing.html">Pricing</a><a href="free-trial.html">Free Trial</a><a href="how-it-works.html">How It Works</a></div>
@@ -585,7 +585,7 @@ function submitForm(e){
   var timer=setTimeout(function(){fb('Timed out. Use WhatsApp below.');},20000);
   function ok(){clearTimeout(timer);area.style.display='none';suc.style.display='block';}
   function fb(r){clearTimeout(timer);err.setAttribute('style','display:block!important;padding:12px;background:rgba(253,3,34,.12);border:1px solid rgba(253,3,34,.4);border-radius:10px;color:#ff6070;font-size:.83rem;margin-top:10px;');err.textContent=r;waW.style.display='block';btn.disabled=false;btn.textContent='Submit Order';}
-  fetch('https://api.emailjs.com/api/v1.0/email/send',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({service_id:'service_pk6jnu9',template_id:'template_763fwro',user_id:'5NnfSkeYa9aonxpMe',template_params:{site_name:'NorwayIPTV',plan:PLAN_INFO,name:n||'Anonymous',from_name:n||'Anonymous',from_email:em||'support@buyiptvnorway.com',reply_to:em||'support@buyiptvnorway.com',phone:wa||'-',country:co||'-',device:dv||'-',message:msg}})}
+  fetch('https://api.emailjs.com/api/v1.0/email/send',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({service_id:'service_pk6jnu9',template_id:'template_763fwro',user_id:'5NnfSkeYa9aonxpMe',template_params:{site_name:'NorwayIPTV',plan:PLAN_INFO,name:n||'Anonymous',from_name:n||'Anonymous',from_email:em||'contact@buyiptvnorway.com',reply_to:em||'contact@buyiptvnorway.com',phone:wa||'-',country:co||'-',device:dv||'-',message:msg}})}
   ).then(function(r){if(r.ok)ok();else fb('Error '+r.status+'.');}).catch(function(){fb('Network error. Use WhatsApp below.');});
 }
 </script>
