@@ -1,0 +1,10 @@
+name = "iptv-trial-buyiptvnorway"
+main = "worker.js"
+compatibility_date = "2024-01-01"
+
+[[kv_namespaces]]
+binding = "TRIALS"
+id = "f10eab6042014c46a62257cf849c06b5"
+
+[triggers]
+crons = ["0 * * * *"]
