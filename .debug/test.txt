@@ -1,4 +1,4 @@
 === GET ===
 NorwayIPTV Trial Worker — OK
 === POST ===
-{"success":false,"error":"[kv_store] Cannot access 'welcomeEmailId' before initialization"}
+{"success":true}
