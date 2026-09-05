@@ -298,10 +298,10 @@ async function handleFetch(request, env) {
     const expiry = Date.now() + 24 * 60 * 60 * 1000;
     await env.TRIALS.put(
       `trial:${email}`,
-      JSON.stringify({ name, email, whatsapp, phone: whatsapp, site: SITE_NAME, username, password, m3uUrl, expiry, reminder_sent: false, followup_sent: false, created_at: Date.now(), welcome_email_id: welcomeEmailId || null }),
+      JSON.stringify({ name, email, whatsapp, phone: whatsapp, site: SITE_NAME, username, password, m3uUrl, expiry, reminder_sent: false, followup_sent: false, created_at: Date.now(), welcome_email_id: null }),
       { expirationTtl: 30 * 24 * 60 * 60 }
     );
-    // Update __keys__ index (read op, not list op — keeps KV list quota safe)
+    // Update __keys__ index
     try {
       const _existingKeys = JSON.parse(await env.TRIALS.get('__keys__') || '[]');
       if (!_existingKeys.includes(email)) {
@@ -310,9 +310,18 @@ async function handleFetch(request, env) {
       }
     } catch(_) {}
 
-    // ── Send emails (after KV so trial is always recorded) ──
+    // ── Send welcome email + store message ID for threading ──
     step = "email_client";
-    const welcomeEmailId = await sendEmail(email, "Your NorwayIPTV Free Trial is Ready — 24H Access Activated ✓", welcomeEmail(name, username, password, m3uUrl), RESEND_KEY);
+    let welcomeEmailId = null;
+    welcomeEmailId = await sendEmail(email, "Your NorwayIPTV Free Trial is Ready — 24H Access Activated ✓", welcomeEmail(name, username, password, m3uUrl), RESEND_KEY);
+    // Update KV with welcome_email_id for thread replies
+    if (welcomeEmailId) {
+      try {
+        const _t = JSON.parse(await env.TRIALS.get(`trial:${email}`) || '{}');
+        _t.welcome_email_id = welcomeEmailId;
+        await env.TRIALS.put(`trial:${email}`, JSON.stringify(_t), { expirationTtl: 30 * 24 * 60 * 60 });
+      } catch(_) {}
+    }
 
     step = "email_admin";
     await sendEmail(ADMIN_EMAIL, `Automation / ${SITE_NAME} / trial / ${name || "—"} / ${email}`, adminEmail(name, email, country, device, whatsapp, notes, username, password, m3uUrl), RESEND_KEY);
@@ -367,4 +376,5 @@ export default {
   async fetch(request, env) { return handleFetch(request, env); },
   async scheduled(event, env, ctx) { ctx.waitUntil(handleScheduled(env)); },
 };
+
 
