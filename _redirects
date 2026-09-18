@@ -1,1 +1,41 @@
+# NorwayIPTV — _redirects (Cloudflare Pages)
+# WhatsApp CTA shortlink
 /go/wa  https://wa.me/17828026280  302
+
+# Clean URL redirects (no .html extension needed)
+/ip-television  /ip-television.html  301
+/tivimate  /tivimate.html  301
+/iptv-smarters  /iptv-smarters.html  301
+/nanomid  /nanomid.html  301
+/iplaytv  /iplaytv.html  301
+/cloud-stream  /cloud-stream.html  301
+/iptv-player  /iptv-player.html  301
+/iptv-providers  /iptv-providers.html  301
+/iptv-firestick  /iptv-firestick.html  301
+/iptv-premium  /iptv-premium.html  301
+/formuler  /formuler.html  301
+/mag-box  /mag-box.html  301
+/iptv-extreme  /iptv-extreme.html  301
+/iptv-subscription  /iptv-subscription.html  301
+/iptv-reviews  /iptv-reviews.html  301
+
+# Existing clean URLs
+/beste-iptv-norge  /beste-iptv-norge.html  301
+/iptv-norge  /iptv-norge.html  301
+/nordic-iptv  /nordic-iptv.html  301
+/iptv-smarters-pro  /iptv-smarters-pro.html  301
+/tivimate-norway  /tivimate-norway.html  301
+/smart-iptv  /smart-iptv.html  301
+/gse-iptv  /gse-iptv.html  301
+/net-iptv  /net-iptv.html  301
+/set-iptv  /set-iptv.html  301
+/4k-iptv  /4k-iptv.html  301
+/iptv-premier-league  /iptv-premier-league.html  301
+/iptv-box  /iptv-box.html  301
+/samsung-iptv-app  /samsung-iptv-app.html  301
+/chromecast-iptv  /chromecast-iptv.html  301
+/iptv-apple-tv-norway  /iptv-apple-tv-norway.html  301
+/iptv-m3u-norway  /iptv-m3u-norway.html  301
+/free-trial  /free-trial.html  301
+/pricing  /pricing.html  301
+/blog  /blog.html  301

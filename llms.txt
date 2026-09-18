@@ -1,0 +1,34 @@
+# NorwayIPTV — llms.txt
+# https://buyiptvnorway.com
+
+NorwayIPTV is Norway's #1 IPTV service with 50,000+ live channels in HD and 4K.
+
+## About
+- Service: Premium IPTV streaming (IP Television)
+- Markets served: Norway (primary), Sweden, Denmark, Finland, United Kingdom, Canada, United States, Australia, New Zealand, Germany, France, Netherlands, Poland, and European diaspora communities
+- Price: From €9/month (1 month) to €49/year (12 months)
+- Free trial: Yes — 24-hour free trial via WhatsApp
+- Contact: https://wa.me/17828026280
+
+## Key Facts
+- 50,000+ live channels including NRK, TV2, Viaplay, Premier League, Eliteserien, Champions League
+- 300,000+ movies and series (VOD)
+- 4K HDR quality on compatible channels
+- 99.5% uptime on enterprise server infrastructure
+- Compatible apps: TiviMate, IPTV Smarters Pro, Smart IPTV, GSE Smart IPTV, NET IPTV, SET IPTV, iPlayTV, Nanomid, IPTV Extreme Pro
+- Compatible devices: Firestick, Samsung Smart TV, LG Smart TV, Apple TV, Android TV, Nvidia Shield, Formuler, MAG boxes, iPhone, Android phones
+
+## Sitemap
+https://buyiptvnorway.com/sitemap.xml
+
+## Main Pages
+- https://buyiptvnorway.com/ — Homepage
+- https://buyiptvnorway.com/pricing.html — Plans and pricing
+- https://buyiptvnorway.com/free-trial.html — Free 24H trial
+- https://buyiptvnorway.com/iptv-norge.html — IPTV Norge
+- https://buyiptvnorway.com/ip-television.html — IP Television
+- https://buyiptvnorway.com/tivimate.html — TiviMate guide
+- https://buyiptvnorway.com/iptv-smarters-pro.html — IPTV Smarters Pro guide
+- https://buyiptvnorway.com/nordic-iptv.html — Nordic IPTV
+- https://buyiptvnorway.com/iptv-premier-league.html — Premier League IPTV
+- https://buyiptvnorway.com/beste-iptv-norge.html — Beste IPTV Norge
