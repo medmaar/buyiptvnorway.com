@@ -84,7 +84,7 @@ a{text-decoration:none;color:inherit}
 .feat-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:22px 18px;transition:all .25s}
 .feat-card:hover{border-color:rgba(253,3,34,.25);transform:translateY(-3px)}
 .feat-icon{font-size:1.7rem;margin-bottom:10px}
-.feat-card h3{font-size:.92rem;font-weight:800;color:#fff;margin-bottom:5px}
+.feat-card h3,.feat-card .h3{font-size:.92rem;font-weight:800;color:#fff;margin-bottom:5px}
 .feat-card p{font-size:.8rem;color:var(--muted);line-height:1.6}
 .related-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:13px;margin-bottom:50px}
 .rel-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:16px 14px;text-align:center;transition:all .25s}
@@ -151,7 +151,7 @@ a{text-decoration:none;color:inherit}
 .footer-brand-text{font-size:.82rem;color:rgba(232,224,255,.45);line-height:1.6;margin-top:10px}
 .footer-brand-text a{color:rgba(232,224,255,.45)}
 .footer-cols{display:flex;gap:48px;flex-wrap:wrap}
-.footer-col h5{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(232,224,255,.3);font-weight:700;margin-bottom:14px}
+.footer-col h5,.footer-col-h{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(232,224,255,.3);font-weight:700;margin-bottom:14px}
 .footer-col a{display:block;font-size:.84rem;color:rgba(232,224,255,.55);transition:color .2s;margin-bottom:10px}
 .footer-col a:hover{color:#fff}
 .footer-copy{padding-top:22px;font-size:.78rem;color:rgba(232,224,255,.25);text-align:center}
@@ -299,9 +299,9 @@ a{text-decoration:none;color:inherit}
         <div class="footer-brand-text">Beste IPTV Norge &mdash; Nordic IPTV Service<br><a href="mailto:contact@buyiptvnorway.com">contact@buyiptvnorway.com</a></div>
       </div>
       <div class="footer-cols">
-        <div class="footer-col"><h5>Service</h5><a href="index.html">Home</a><a href="pricing.html">Pricing</a><a href="free-trial.html">Free Trial</a><a href="how-it-works.html">How It Works</a></div>
-        <div class="footer-col"><h5>Company</h5><a href="about.html">About Us</a><a href="blog.html">Blog</a><a href="contact.html">Contact Us</a><a href="/go/wa?msg=Hi%2C+I%27m+interested+in+NorwayIPTV">WhatsApp Support</a></div>
-        <div class="footer-col"><h5>Legal</h5><a href="privacy-policy.html">Privacy Policy</a><a href="terms-and-conditions.html">Terms &amp; Conditions</a><a href="refund-policy.html">Refund Policy</a></div>
+        <div class="footer-col"><p class="footer-col-h">Service</p><a href="index.html">Home</a><a href="pricing.html">Pricing</a><a href="free-trial.html">Free Trial</a><a href="how-it-works.html">How It Works</a></div>
+        <div class="footer-col"><p class="footer-col-h">Company</p><a href="about.html">About Us</a><a href="blog.html">Blog</a><a href="contact.html">Contact Us</a><a href="/go/wa?msg=Hi%2C+I%27m+interested+in+NorwayIPTV">WhatsApp Support</a></div>
+        <div class="footer-col"><p class="footer-col-h">Legal</p><a href="privacy-policy.html">Privacy Policy</a><a href="terms-and-conditions.html">Terms &amp; Conditions</a><a href="refund-policy.html">Refund Policy</a></div>
       </div>
     </div>
     <div class="footer-copy">&copy; 2026 NorwayIPTV &mdash; Beste IPTV Norge &middot; Nordic IPTV &middot; IPTV Norway &middot; IPTV Smarters Pro Compatible</div>
@@ -348,7 +348,7 @@ img:is([sizes="auto" i], [sizes^="auto," i]) { contain-intrinsic-size: 3000px 15
   .footer-brand-text a{color:rgba(232,224,255,.45);transition:color .2s;}
   .footer-brand-text a:hover{color:#fff;}
   .footer-cols{display:flex;gap:48px;flex-wrap:wrap;}
-  .footer-col h5{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(232,224,255,.3);font-weight:700;margin-bottom:14px;}
+  .footer-col h5,.footer-col-h{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(232,224,255,.3);font-weight:700;margin-bottom:14px;}
   .footer-col a{display:block;font-size:.84rem;color:rgba(232,224,255,.55);transition:color .2s;margin-bottom:10px;}
   .footer-col a:hover{color:#fff;}
   .footer-copy{padding-top:22px;font-size:.78rem;color:rgba(232,224,255,.25);text-align:center;}
