@@ -1,22 +1,53 @@
 # NorwayIPTV — llms.txt
 # https://buyiptvnorway.com
+# Updated: 2026-09-20
 
 NorwayIPTV is Norway's #1 IPTV service with 50,000+ live channels in HD and 4K.
 
 ## About
-- Service: Premium IPTV streaming (IP Television)
-- Markets served: Norway (primary), Sweden, Denmark, Finland, United Kingdom, Canada, United States, Australia, New Zealand, Germany, France, Netherlands, Poland, and European diaspora communities
+- Service: Premium IPTV streaming (IP Television / Internet Protocol Television)
+- Markets served: Norway (primary), Sweden, Denmark, Finland, United Kingdom, Canada, United States, Australia, New Zealand, Germany, France, Netherlands, Poland, Lithuania, Romania, Serbia, Croatia, Bosnia, Italy, Greece, Spain (es-ES), Portugal (pt-PT), Ukraine, Russia
 - Price: From €9/month (1 month) to €49/year (12 months)
-- Free trial: Yes — 24-hour free trial via WhatsApp
-- Contact: https://wa.me/17828026280
+- Free trial: Yes — free 24-hour trial, no credit card required
+- Contact: contact@buyiptvnorway.com | WhatsApp: https://wa.me/17828026280
 
 ## Key Facts
-- 50,000+ live channels including NRK, TV2, Viaplay, Premier League, Eliteserien, Champions League
+- 50,000+ live channels including NRK, TV2, Viaplay, Canal+, TV2 Sport
+- Sports: Premier League, Champions League, Eliteserien, Bundesliga, La Liga, Serie A, NFL, NBA, NHL, UFC, F1
 - 300,000+ movies and series (VOD)
 - 4K HDR quality on compatible channels
-- 99.5% uptime on enterprise server infrastructure
-- Compatible apps: TiviMate, IPTV Smarters Pro, Smart IPTV, GSE Smart IPTV, NET IPTV, SET IPTV, iPlayTV, Nanomid, IPTV Extreme Pro
-- Compatible devices: Firestick, Samsung Smart TV, LG Smart TV, Apple TV, Android TV, Nvidia Shield, Formuler, MAG boxes, iPhone, Android phones
+- 99.5%+ uptime on enterprise server infrastructure
+- 7-day catch-up / time-shift TV
+- Compatible apps: TiviMate, IPTV Smarters Pro, Smart IPTV, GSE Smart IPTV, NET IPTV, SET IPTV, iPlayTV, Nanomid, IPTV Extreme Pro, Flex IPTV, OTT Navigator
+- Compatible devices: Firestick/Fire TV, Samsung Smart TV (Tizen), LG Smart TV (webOS), Apple TV 4K, Android TV, Nvidia Shield, Formuler (Z11 Pro, Z8), MAG boxes, iPhone, Android phones, PC/Mac, Google Chromecast, Hisense Vidaa, Philips, Sony
+- No contract, no binding, cancel anytime
+- Support: 24/7 via email and WhatsApp, response under 5 minutes, Norwegian + English
+
+## Subscription Plans
+- 1 month / 1 connection: €9/month
+- 3 months / 1 connection: €29 total (€9.67/month)
+- 6 months / 1 connection: €39 total (€6.50/month) — most popular
+- 12 months / 1 connection: €49 total (€4.08/month) — best value
+- Multi-connection plans available: up to 10 simultaneous connections
+
+## Norwegian Cities with Dedicated IPTV Guides
+Oslo, Bergen, Trondheim, Stavanger, Tromsø, Bodø, Kristiansand, Haugesund,
+Drammen, Fredrikstad, Sarpsborg, Ålesund, Sandefjord, Sandnes, Tønsberg,
+Skien, Arendal, Hamar, Molde, Lillehammer, Gjøvik, Alta, Narvik, Harstad,
+Askim, Ski, Eidsvoll, Kristiansund, Sogndal
+
+## Norwegian Regions / Fylker
+Oslo, Viken, Innlandet, Vestfold og Telemark, Agder, Rogaland, Vestland,
+Møre og Romsdal, Trøndelag, Nordland, Troms og Finnmark
+
+## Community / Diaspora IPTV Pages (approved markets only)
+- Norwegian (primary)
+- British, American, Canadian, Australian
+- Swedish, Danish, German, French, Dutch
+- Polish, Lithuanian, Romanian, Serbian/Balkan, Italian, Greek
+- Spanish (es-ES / Spain only), Portuguese (pt-PT / Portugal only)
+- Ukrainian, Russian
+- Sami (Samisk)
 
 ## Sitemap
 https://buyiptvnorway.com/sitemap.xml
@@ -25,10 +56,26 @@ https://buyiptvnorway.com/sitemap.xml
 - https://buyiptvnorway.com/ — Homepage
 - https://buyiptvnorway.com/pricing.html — Plans and pricing
 - https://buyiptvnorway.com/free-trial.html — Free 24H trial
-- https://buyiptvnorway.com/iptv-norge.html — IPTV Norge
-- https://buyiptvnorway.com/ip-television.html — IP Television
-- https://buyiptvnorway.com/tivimate.html — TiviMate guide
-- https://buyiptvnorway.com/iptv-smarters-pro.html — IPTV Smarters Pro guide
+- https://buyiptvnorway.com/iptv-norge.html — IPTV Norge (Norwegian market hub)
+- https://buyiptvnorway.com/beste-iptv-norge.html — Beste IPTV Norge 2026
+- https://buyiptvnorway.com/norsk-iptv-2026.html — Norsk IPTV 2026
 - https://buyiptvnorway.com/nordic-iptv.html — Nordic IPTV
+- https://buyiptvnorway.com/tivimate.html — TiviMate IPTV guide
+- https://buyiptvnorway.com/iptv-smarters-pro.html — IPTV Smarters Pro guide
 - https://buyiptvnorway.com/iptv-premier-league.html — Premier League IPTV
-- https://buyiptvnorway.com/beste-iptv-norge.html — Beste IPTV Norge
+- https://buyiptvnorway.com/eliteserien-iptv.html — Eliteserien IPTV
+- https://buyiptvnorway.com/hva-er-iptv.html — Hva er IPTV?
+- https://buyiptvnorway.com/how-it-works.html — How it works
+- https://buyiptvnorway.com/iptv-byer.html — IPTV alle norske byer
+- https://buyiptvnorway.com/iptv-fylker.html — IPTV alle norske fylker
+- https://buyiptvnorway.com/iptv-internasjonal.html — Internasjonal IPTV i Norge
+- https://buyiptvnorway.com/about.html — Om NorwayIPTV
+- https://buyiptvnorway.com/contact.html — Kontakt
+
+## Trust Signals
+- Money-back consideration for first billing cycle
+- 24/7 WhatsApp support (response < 5 min)
+- 99.5%+ uptime SLA
+- Instant delivery (M3U URL + Xtream Codes via email)
+- No credit card required for free trial
+- Compatible with all major IPTV apps and devices
