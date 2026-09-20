@@ -34,4 +34,19 @@ Allow: /
 User-agent: Google-Extended
 Allow: /
 
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Diffbot
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /
 Sitemap: https://buyiptvnorway.com/sitemap.xml
