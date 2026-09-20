@@ -372,3 +372,6 @@
 /ufc-iptv-norway  /ufc-iptv-norway.html  301
 /viaplay-iptv  /viaplay-iptv.html  301
 /viking-iptv  /viking-iptv.html  301
+
+# Missing clean URL
+/iptv-setup-norway  /iptv-setup-norway.html  301
