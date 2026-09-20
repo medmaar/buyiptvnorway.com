@@ -16,7 +16,7 @@ Disallow: /go/
 User-agent: GPTBot
 Allow: /
 
-User-agent: Claude-Web
+User-agent: ClaudeBot
 Allow: /
 
 User-agent: anthropic-ai
@@ -29,6 +29,9 @@ User-agent: CCBot
 Allow: /
 
 User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Google-Extended
 Allow: /
 
 Sitemap: https://buyiptvnorway.com/sitemap.xml

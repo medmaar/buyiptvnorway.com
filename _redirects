@@ -238,3 +238,29 @@
 /iptv-stb /iptv-box.html 301
 /iptv-internet.html /iptv-setup-norway.html 301
 /iptv-internet /iptv-setup-norway.html 301
+
+# High-value pages — additional clean URL redirects
+/about  /about.html  301
+/contact  /contact.html  301
+/how-it-works  /how-it-works.html  301
+/iptv-oslo  /iptv-oslo.html  301
+/iptv-bergen  /iptv-bergen.html  301
+/iptv-trondheim  /iptv-trondheim.html  301
+/iptv-stavanger  /iptv-stavanger.html  301
+/iptv-kristiansand  /iptv-kristiansand.html  301
+/iptv-norway-review  /iptv-norway-review.html  301
+/best-iptv-provider  /best-iptv-provider.html  301
+/hva-er-iptv  /hva-er-iptv.html  301
+/iptv-lovlig-norge  /iptv-lovlig-norge.html  301
+/sport-iptv-norway  /sport-iptv-norway.html  301
+/eliteserien-iptv  /eliteserien-iptv.html  301
+/champions-league-iptv  /champions-league-iptv.html  301
+/buy-iptv-norway  /buy-iptv-norway.html  301
+/cheap-iptv-norway  /cheap-iptv-norway.html  301
+/order-iptv-norway  /order-iptv-norway.html  301
+/iptv-polski  /iptv-polsk.html  301
+/best-iptv-subscription-norway  /best-iptv-subscription-norway.html  301
+/gratis-iptv-proveperiode  /gratis-iptv-proveperiode.html  301
+/iptv-abonnement-norge  /iptv-abonnement-norge.html  301
+/reseller  /reseller.html  301
+/referral  /referral.html  301
