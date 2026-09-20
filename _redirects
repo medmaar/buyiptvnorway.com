@@ -230,3 +230,11 @@
 /iptv-ski /iptv-ski.html 301
 /iptv-eidsvoll /iptv-eidsvoll.html 301
 /iptv-sogndal /iptv-sogndal.html 301
+
+# Missing page redirects
+/iptv-norway.html /iptv-norge.html 301
+/iptv-norway /iptv-norge.html 301
+/iptv-stb.html /iptv-box.html 301
+/iptv-stb /iptv-box.html 301
+/iptv-internet.html /iptv-setup-norway.html 301
+/iptv-internet /iptv-setup-norway.html 301
