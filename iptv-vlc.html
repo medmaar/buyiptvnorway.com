@@ -142,7 +142,13 @@ a{text-decoration:none;color:inherit}
 @keyframes wa-pulse{0%,100%{box-shadow:0 8px 22px rgba(0,0,0,.45),0 0 0 0 rgba(37,211,102,.55)}50%{box-shadow:0 8px 22px rgba(0,0,0,.45),0 0 0 10px rgba(37,211,102,0)}}
 @media(max-width:768px){.mojo-nav-links{display:none}.mojo-burger{display:flex}.feat-grid{grid-template-columns:1fr 1fr}.related-kw-grid{grid-template-columns:repeat(2,1fr)}.kw-2col{grid-template-columns:1fr}}
 @media(max-width:480px){.feat-grid{grid-template-columns:1fr}}
-@media(max-width:600px){.wa-float{width:52px;height:52px;right:16px;bottom:16px}}</style>
+@media(max-width:600px){.wa-float{width:52px;height:52px;right:16px;bottom:16px}}
+/* content-expand section */
+.content-expand{padding:20px 0;border-top:1px solid #e8ecf0;margin-top:24px}
+.content-expand h2{font-size:1.2rem;font-weight:700;margin:0 0 12px;color:#1a1a2e}
+.content-expand p{margin:0 0 12px;line-height:1.75;color:#444;font-size:.97rem}
+.content-expand p:last-child{margin-bottom:0}
+</style>
 </head>
 <body>
 <a class="sr-only" href="#content">Skip to main content</a>
@@ -236,6 +242,10 @@ a{text-decoration:none;color:inherit}
     <li><a href="iptv-checker.html">IPTV M3U Checker</a></li>
   </ul>
 </section>
+<section class="content-expand"><h2>VLC and IPTV — Advanced Setup for Windows and Mac</h2>
+<p>VLC Media Player supports IPTV M3U playlists natively on Windows, macOS, Linux, Android, and iOS. It is the most universally available IPTV player because it comes pre-installed on many computers and requires no additional configuration beyond adding your M3U URL. However, it lacks the dedicated IPTV features that purpose-built players provide: there is no EPG support in VLC, no catch-up, no DVR, and no category filtering of the channel list.</p>
+<p>To open NorwayIPTV in VLC on Windows or macOS: go to Media > Open Network Stream (Ctrl+N on Windows, Cmd+N on Mac), paste your M3U URL into the URL field, and click Play. VLC generates a basic channel list from the M3U file with no grouping or guide. For Norwegian viewers who want a more functional experience with EPG and category navigation, Kodi with the IPTV Simple Client plugin is a better choice on the same platforms.</p>
+<p>VLC is most useful as a secondary tool for IPTV: as a quick way to check whether a specific M3U URL is working (it is faster to test than setting up a full app), or for playing individual channel URLs when you need to verify a stream works before configuring your main IPTV player. NorwayIPTV M3U URLs work in VLC without any modification. The URL format is the same one used by TiviMate, Smarters Pro, and all other M3U-compatible players.</p></section>
 </main>
 <!-- outbound-authority-links -->
 <div style="background:#0e0820;padding:14px 24px;border-top:1px solid rgba(255,255,255,.06);">
