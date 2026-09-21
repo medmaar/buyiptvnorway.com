@@ -50,3 +50,22 @@ Allow: /
 User-agent: Meta-ExternalAgent
 Allow: /
 Sitemap: https://buyiptvnorway.com/sitemap.xml
+
+User-agent: GrokBot
+Allow: /
+
+User-agent: Gemini-Crawl
+Allow: /
+
+User-agent: MistralBot
+Allow: /
+
+User-agent: CohereAI
+Allow: /
+
+User-agent: YouBot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
