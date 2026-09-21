@@ -1,0 +1,10 @@
+=== .RU — reseller_info ===
+{"status":"true","username":"medmaar","enabled":1,"credits":"293.0"}
+=== .RU — sub=99 demo ===
+{"status":"false","message":"Not enough credits"}
+=== .NET — reseller_info ===
+{"status":"true","username":"medmaar","enabled":1,"credits":"293.0"}
+=== .NET — sub=99 demo ===
+{"status":"false","message":"Not enough credits"}
+=== .RU — bouquet ===
+[{"id":29202,"name":"USA - All \t"},{"id":29203,"name":"USA - ONLY"},{"id":35105,"name":"UK - All"},{"id":35106,"name":"UK - ONLY"},{"id":35107,"name":"Germany"},{"id":35108,"name":"France"},{"id":37498,"name":"Norway"}]
