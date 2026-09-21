@@ -1,0 +1,8 @@
+=== Reseller info (current balance) ===
+{"status":"true","username":"medmaar","enabled":1,"credits":"293.0"}
+=== TEST 1: sub=3 months pack=37498 Norway ===
+{"status":"false","message":"Unable to create M3U"}
+=== TEST 2: sub=99 demo pack=37498 Norway ===
+{"status":"false","message":"Not enough credits"}
+=== Full worker POST ===
+{"success":false,"error":"[create_demo] Panel: Not enough credits"}
