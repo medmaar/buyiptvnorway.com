@@ -10,8 +10,6 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
     steps:
       - uses: actions/checkout@v4
 
@@ -77,32 +75,3 @@ jobs:
             -H "Authorization: Bearer ${CF_TOKEN}" \
             -H "Content-Type: application/json" \
             -d '[{"cron": "0 * * * *"}]'
-
-      - name: Diagnose — full step-by-step test
-        env:
-          CF_TOKEN: ${{ secrets.CF_API_TOKEN }}
-          CF_ACCOUNT: ${{ secrets.CF_ACCOUNT_ID }}
-        run: |
-          sleep 5
-          mkdir -p .debug
-          echo "=== GET ===" > .debug/diag.txt
-          curl -s "https://iptv-trial-buyiptvnorway.medmaar.workers.dev/" >> .debug/diag.txt
-          echo "" >> .debug/diag.txt
-          echo "=== Full POST (real data) ===" >> .debug/diag.txt
-          curl -s -X POST "https://iptv-trial-buyiptvnorway.medmaar.workers.dev/" \
-            -H "Content-Type: application/json" \
-            -d '{"name":"Mo Test","email":"elmaaroufi.md@gmail.com","country":"Morocco","whatsapp":"+212689299813","device":"Samsung Smart TV","notes":"test"}' \
-            >> .debug/diag.txt
-          echo "" >> .debug/diag.txt
-          echo "=== Secrets in CF ===" >> .debug/diag.txt
-          curl -s "https://api.cloudflare.com/client/v4/accounts/${CF_ACCOUNT}/workers/scripts/iptv-trial-buyiptvnorway/secrets" \
-            -H "Authorization: Bearer ${CF_TOKEN}" | python3 -c "import sys,json; d=json.load(sys.stdin); [print(s['name']) for s in d.get('result',[])]" >> .debug/diag.txt 2>&1
-          cat .debug/diag.txt
-
-      - name: Commit result
-        run: |
-          git config user.name bot
-          git config user.email bot@example.com
-          git add .debug/diag.txt
-          git commit -m "debug: full diagnosis" || true
-          git push || true
