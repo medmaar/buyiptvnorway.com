@@ -1,6 +1,0 @@
-=== Reseller info ===
-{"status":"true","username":"medmaar","enabled":1,"credits":"293.0"}
-=== Bouquet list ===
-[{"id":29202,"name":"USA - All \t"},{"id":29203,"name":"USA - ONLY"},{"id":35105,"name":"UK - All"},{"id":35106,"name":"UK - ONLY"},{"id":35107,"name":"Germany"},{"id":35108,"name":"France"},{"id":37498,"name":"Norway"}]
-=== Create demo with pack=all ===
-{"status":"false","message":"Not enough credits"}
