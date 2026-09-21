@@ -214,7 +214,19 @@ a{text-decoration:none;color:inherit}
 <div class="rk-card"><a href="free-trial.html">Free IPTV Trial</a><div class="rk-card-vol">110/mo</div></div>
 </div>
 </div></section>
-<div class="section" style="padding-top:0"><div class="wrap">
+<div class="section" style="padding-top:0"><section style="padding:36px 0;background:var(--bg-alt,#f8f9fa)"><div class="wrap">
+<h2>Jellyfin IPTV Setup — NorwayIPTV + Jellyfin 2026</h2>
+<p>Jellyfin is a free, open-source media server that supports IPTV via the M3U plugin. Here is how to integrate NorwayIPTV with Jellyfin:</p>
+<ol style="margin:12px 0 12px 24px;line-height:2.2">
+<li>Install Jellyfin on your server (Windows, Linux, Mac, NAS, Docker)</li>
+<li>Go to Dashboard → Live TV → Add a tuner device → M3U Tuner</li>
+<li>Paste your NorwayIPTV M3U URL in the M3U URL field</li>
+<li>Add your NorwayIPTV EPG (XMLTV) URL in the TV Guide Data Provider section</li>
+<li>Refresh the guide data — NRK, TV2 and all Norwegian channels should appear in the Jellyfin TV guide</li>
+</ol>
+<p><strong>Limitations:</strong> Jellyfin IPTV integration does not support Xtream Codes API — only M3U. For Norwegian channel EPG in Jellyfin, use the XMLTV URL provided in your NorwayIPTV welcome email. Catch-up TV is not available via Jellyfin; for catch-up, use IPTV Smarters Pro or TiviMate with Xtream Codes directly.</p>
+<p>Jellyfin is an excellent choice for users who already run a home media server and want to consolidate IPTV and personal media collections in one interface. For most Norwegian viewers without an existing server setup, IPTV Smarters Pro is simpler and more reliable for daily IPTV use.</p>
+</div></section><div class="wrap">
 <div class="sec-kicker">FAQ</div>
 <h2 class="sec-title">Frequently Asked Questions</h2>
 <div class="faq-list"><div class="faq-item"><div class="faq-q" role="button" tabindex="0">Does NorwayIPTV work with Jellyfin? <span aria-hidden="true" class="faq-icon">+</span></div><div class="faq-a">Yes — add your NorwayIPTV M3U URL as an M3U Tuner in Jellyfin's Live TV settings.</div></div><div class="faq-item"><div class="faq-q" role="button" tabindex="0">How do I add IPTV to Jellyfin? <span aria-hidden="true" class="faq-icon">+</span></div><div class="faq-a">In Jellyfin: Dashboard → Live TV → Tuner Devices → Add → M3U Tuner → enter your NorwayIPTV M3U URL.</div></div><div class="faq-item"><div class="faq-q" role="button" tabindex="0">Does Jellyfin support EPG for IPTV? <span aria-hidden="true" class="faq-icon">+</span></div><div class="faq-a">Yes — add your NorwayIPTV XMLTV/EPG URL in Jellyfin's Live TV guide data provider settings.</div></div><div class="faq-item"><div class="faq-q" role="button" tabindex="0">Jellyfin IPTV vs Plex IPTV? <span aria-hidden="true" class="faq-icon">+</span></div><div class="faq-a">Jellyfin is free (no subscription required for live TV); Plex requires Plex Pass. Both work with NorwayIPTV M3U URLs.</div></div><div class="faq-item"><div class="faq-q" role="button" tabindex="0">Can I record IPTV on Jellyfin? <span aria-hidden="true" class="faq-icon">+</span></div><div class="faq-a">Yes — Jellyfin supports DVR recording of live TV channels including NorwayIPTV streams (requires storage space on your server).</div></div><div class="faq-item"><div class="faq-q" role="button" tabindex="0">Free NorwayIPTV trial for Jellyfin? <span aria-hidden="true" class="faq-icon">+</span></div><div class="faq-a">Yes — free 24H NorwayIPTV trial. Contact us via WhatsApp to test on your Jellyfin server.</div></div></div>
