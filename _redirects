@@ -2,6 +2,15 @@
 # WhatsApp CTA shortlink
 /go/wa  https://wa.me/17828026280  302
 
+# Utility page clean URLs
+/dmca /dmca.html 301
+/privacy-policy /privacy-policy.html 301
+/refund-policy /refund-policy.html 301
+/terms-and-conditions /terms-and-conditions.html 301
+/terms /terms-and-conditions.html 301
+/privacy /privacy-policy.html 301
+/refund /refund-policy.html 301
+
 # Clean URL redirects (no .html extension needed)
 /ip-television  /ip-television.html  301
 /tivimate  /tivimate.html  301
