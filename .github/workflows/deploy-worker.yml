@@ -78,30 +78,30 @@ jobs:
             -H "Content-Type: application/json" \
             -d '[{"cron": "0 * * * *"}]'
 
-      - name: Deep panel debug
+      - name: Test all pack combinations
         run: |
           sleep 5
           mkdir -p .debug
           API_KEY="35cf68cc83a3a82e1a0ac5361c7b6105"
 
-          echo "=== Reseller info ===" > .debug/panel.txt
-          curl -s "https://activationpanel.net/api/api.php?action=reseller_info&api_key=${API_KEY}" >> .debug/panel.txt
-          echo "" >> .debug/panel.txt
+          echo "=== sub=99 pack=37498 (Norway specific) ===" > .debug/pack_test.txt
+          curl -s "https://activationpanel.net/api/api.php?action=new&type=m3u&sub=99&pack=37498&api_key=${API_KEY}&note=test_specific" >> .debug/pack_test.txt
+          echo "" >> .debug/pack_test.txt
 
-          echo "=== Bouquet list ===" >> .debug/panel.txt
-          curl -s "https://activationpanel.net/api/api.php?action=bouquet&api_key=${API_KEY}" >> .debug/panel.txt
-          echo "" >> .debug/panel.txt
+          echo "=== sub=99 pack=all ===" >> .debug/pack_test.txt
+          curl -s "https://activationpanel.net/api/api.php?action=new&type=m3u&sub=99&pack=all&api_key=${API_KEY}&note=test_all" >> .debug/pack_test.txt
+          echo "" >> .debug/pack_test.txt
 
-          echo "=== Create demo with pack=all ===" >> .debug/panel.txt
-          curl -s "https://activationpanel.net/api/api.php?action=new&type=m3u&sub=99&pack=all&api_key=${API_KEY}&note=test" >> .debug/panel.txt
-          echo "" >> .debug/panel.txt
+          echo "=== sub=1 pack=37498 (1 month = uses credits) ===" >> .debug/pack_test.txt
+          curl -s "https://activationpanel.net/api/api.php?action=new&type=m3u&sub=1&pack=37498&api_key=${API_KEY}&note=test_1month" >> .debug/pack_test.txt
+          echo "" >> .debug/pack_test.txt
 
-          cat .debug/panel.txt
+          cat .debug/pack_test.txt
 
       - name: Commit result
         run: |
           git config user.name bot
           git config user.email bot@example.com
-          git add .debug/panel.txt
-          git commit -m "debug: panel deep diagnosis" || true
+          git add .debug/pack_test.txt
+          git commit -m "debug: pack combination test" || true
           git push || true
