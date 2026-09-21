@@ -18,7 +18,8 @@
 <meta content="#fd0322" name="theme-color"/>
 <link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link as="style" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&amp;display=swap" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/>
-<script type="application/ld+json">{
+<script type="application/ld+json">
+{
   "@context": "https://schema.org",
   "@type": "WebPage",
   "name": "Plex IPTV — NorwayIPTV on Plex Media Server 2026",
@@ -33,8 +34,10 @@
     "@type": "WebSite",
     "name": "NorwayIPTV",
     "url": "https://buyiptvnorway.com/"
-  }
-}</script>
+  },
+  "description": "Plex IPTV with NorwayIPTV 2026 — set up live TV on Plex. 50,000+ channels, 4K IPTV, NRK & TV2. Free 24H trial from €9/month. Step-by-step guide."
+}
+</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"NorwayIPTV","item":"https://buyiptvnorway.com/"},{"@type":"ListItem","position":2,"name":"Plex IPTV — NorwayIPTV on Plex Media Server 2026","item":"https://buyiptvnorway.com/plex-iptv.html"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Does NorwayIPTV work with Plex?","acceptedAnswer":{"@type":"Answer","text":"Yes — add your NorwayIPTV M3U URL as an M3U Tuner in Plex's Live TV &amp; DVR settings. Plex Pass is required."}},{"@type":"Question","name":"Is Plex Pass needed for IPTV?","acceptedAnswer":{"@type":"Answer","text":"Yes — Plex Live TV with M3U tuners requires a Plex Pass subscription."}},{"@type":"Question","name":"Plex IPTV vs Jellyfin IPTV?","acceptedAnswer":{"@type":"Answer","text":"Jellyfin is free and open-source (no subscription); Plex requires Plex Pass for live TV. Both accept NorwayIPTV M3U URLs. Jellyfin is recommended if you don't have Plex Pass."}},{"@type":"Question","name":"How do I add IPTV M3U to Plex?","acceptedAnswer":{"@type":"Answer","text":"Settings → Live TV &amp; DVR → Set Up Plex Tuner → M3U Playlist → paste your NorwayIPTV M3U URL."}},{"@type":"Question","name":"Does NorwayIPTV work on Plex PS5?","acceptedAnswer":{"@type":"Answer","text":"Yes — via the Plex app on PS5 and your NorwayIPTV M3U tuner set up on your Plex server (Plex Pass required)."}},{"@type":"Question","name":"Free NorwayIPTV trial for Plex?","acceptedAnswer":{"@type":"Answer","text":"Yes — free 24H trial. Contact us via WhatsApp."}}]}</script>
 <style>:root{--red:#fd0322;--border:rgba(255,255,255,.1);--text:#e8e0ff;--bg:#0a0414;--card:rgba(255,255,255,.04);--muted:rgba(232,224,255,.6)}
@@ -118,7 +121,22 @@ a{text-decoration:none;color:inherit}
 @keyframes wa-pulse{0%,100%{box-shadow:0 8px 22px rgba(0,0,0,.45),0 0 0 0 rgba(37,211,102,.55)}50%{box-shadow:0 8px 22px rgba(0,0,0,.45),0 0 0 10px rgba(37,211,102,0)}}
 @media(max-width:768px){.mojo-nav-links{display:none}.mojo-burger{display:flex}.feat-grid{grid-template-columns:1fr 1fr}.related-kw-grid{grid-template-columns:repeat(2,1fr)}.kw-2col{grid-template-columns:1fr}}
 @media(max-width:480px){.feat-grid{grid-template-columns:1fr}}
-@media(max-width:600px){.wa-float{width:52px;height:52px;right:16px;bottom:16px}}</style>
+@media(max-width:600px){.wa-float{width:52px;height:52px;right:16px;bottom:16px}}
+/* Related links nav */
+.related-links-nav{background:#f8f9fa;border-left:3px solid #0057b7;padding:16px 20px;margin:24px 0;border-radius:0 6px 6px 0}
+.related-links-nav h3{margin:0 0 10px;font-size:1rem;font-weight:600;color:#1a1a2e}
+.related-links-list{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.related-links-list li a{display:inline-block;padding:5px 12px;background:#fff;border:1px solid #d1d9e0;border-radius:20px;font-size:.85rem;color:#0057b7;text-decoration:none;transition:background .2s,border-color .2s}
+.related-links-list li a:hover{background:#0057b7;color:#fff;border-color:#0057b7}
+/* Content expand */
+.content-expand{padding:20px 0;border-top:1px solid #e8ecf0;margin-top:20px}
+.content-expand h2{font-size:1.25rem;margin-bottom:12px;color:#1a1a2e}
+.content-expand p{margin:0 0 12px;line-height:1.7;color:#444}
+/* Outbound learn more */
+.learn-more-ext{padding:10px 0;margin-top:16px}
+.learn-more-ext .ext-link-note{font-size:.88rem;color:#666}
+.learn-more-ext .ext-link-note a{color:#0057b7}
+</style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Plex", "operatingSystem": "Android, iOS, Windows, macOS, Smart TV, Firestick", "applicationCategory": "MultimediaApplication", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR"}, "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.4", "ratingCount": "150000", "bestRating": "5", "worstRating": "1"}, "url": "https://www.plex.tv"}</script>
 </head>
 <body>
@@ -183,6 +201,13 @@ a{text-decoration:none;color:inherit}
 <div class="sec-kicker">FAQ</div><h2 class="sec-title">Frequently Asked Questions</h2>
 <div class="faq-list"><div class="faq-item"><div class="faq-q" role="button" tabindex="0">Does NorwayIPTV work with Plex? <span aria-hidden="true" class="faq-icon">+</span></div><div class="faq-a">Yes — add your NorwayIPTV M3U URL as an M3U Tuner in Plex's Live TV &amp; DVR settings. Plex Pass is required.</div></div><div class="faq-item"><div class="faq-q" role="button" tabindex="0">Is Plex Pass needed for IPTV? <span aria-hidden="true" class="faq-icon">+</span></div><div class="faq-a">Yes — Plex Live TV with M3U tuners requires a Plex Pass subscription.</div></div><div class="faq-item"><div class="faq-q" role="button" tabindex="0">Plex IPTV vs Jellyfin IPTV? <span aria-hidden="true" class="faq-icon">+</span></div><div class="faq-a">Jellyfin is free and open-source (no subscription); Plex requires Plex Pass for live TV. Both accept NorwayIPTV M3U URLs. Jellyfin is recommended if you don't have Plex Pass.</div></div><div class="faq-item"><div class="faq-q" role="button" tabindex="0">How do I add IPTV M3U to Plex? <span aria-hidden="true" class="faq-icon">+</span></div><div class="faq-a">Settings → Live TV &amp; DVR → Set Up Plex Tuner → M3U Playlist → paste your NorwayIPTV M3U URL.</div></div><div class="faq-item"><div class="faq-q" role="button" tabindex="0">Does NorwayIPTV work on Plex PS5? <span aria-hidden="true" class="faq-icon">+</span></div><div class="faq-a">Yes — via the Plex app on PS5 and your NorwayIPTV M3U tuner set up on your Plex server (Plex Pass required).</div></div><div class="faq-item"><div class="faq-q" role="button" tabindex="0">Free NorwayIPTV trial for Plex? <span aria-hidden="true" class="faq-icon">+</span></div><div class="faq-a">Yes — free 24H trial. Contact us via WhatsApp.</div></div></div>
 </div></div>
+
+<section class="related-links-nav" aria-label="Related pages">
+  <h3>Related IPTV Guides</h3>
+  <ul class="related-links-list">
+    <li><a href="proton-iptv.html">Proton IPTV</a></li><li><a href="ott-navigator.html">OTT Navigator</a></li><li><a href="purple-iptv.html">Purple IPTV</a></li><li><a href="iptv-player.html">All IPTV Players</a></li>
+  </ul>
+</section>
 </main>
 <!-- outbound-authority-links -->
 <div style="background:#0e0820;padding:14px 24px;border-top:1px solid rgba(255,255,255,.06);">
