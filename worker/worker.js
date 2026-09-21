@@ -4,9 +4,9 @@
  * RESEND_KEY loaded from Cloudflare Worker Secret (env.RESEND_KEY)
  */
 
-const API_BASE    = "https://activationpanel.ru/api/api.php";
+const API_BASE    = "https://activationpanel.net/api/api.php";
 const API_KEY     = "35cf68cc83a3a82e1a0ac5361c7b6105";
-const HOST        = "http://line.truthdaily.me";
+const HOST        = "http://terry.thecontentnest.com";
 const FROM_EMAIL  = "NorwayIPTV <contact@buyiptvnorway.com>";
 const ADMIN_EMAIL = "contact@buyiptvnorway.com";
 const SITE_URL    = "https://buyiptvnorway.com";
@@ -376,5 +376,6 @@ export default {
   async fetch(request, env) { return handleFetch(request, env); },
   async scheduled(event, env, ctx) { ctx.waitUntil(handleScheduled(env)); },
 };
+
 
 
