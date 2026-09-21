@@ -15,7 +15,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Deploy Worker
+      - name: Deploy
         env:
           CF_TOKEN: ${{ secrets.CF_API_TOKEN }}
           CF_ACCOUNT: ${{ secrets.CF_ACCOUNT_ID }}
@@ -27,8 +27,10 @@ jobs:
             -F "worker.js=@worker/worker.js;type=application/javascript+module"
           curl -s -X POST "https://api.cloudflare.com/client/v4/accounts/${CF_ACCOUNT}/workers/scripts/iptv-trial-buyiptvnorway/subdomain" \
             -H "Authorization: Bearer ${CF_TOKEN}" -H "Content-Type: application/json" -d '{"enabled":true}'
+          curl -s -X PUT "https://api.cloudflare.com/client/v4/accounts/${CF_ACCOUNT}/workers/scripts/iptv-trial-buyiptvnorway/schedules" \
+            -H "Authorization: Bearer ${CF_TOKEN}" -H "Content-Type: application/json" -d '[{"cron":"0 * * * *"}]'
 
-      - name: Store Resend key
+      - name: Store secret
         env:
           CF_TOKEN: ${{ secrets.CF_API_TOKEN }}
           CF_ACCOUNT: ${{ secrets.CF_ACCOUNT_ID }}
@@ -38,44 +40,37 @@ jobs:
             -H "Authorization: Bearer ${CF_TOKEN}" -H "Content-Type: application/json" \
             -d "{\"name\":\"RESEND_KEY\",\"text\":\"${RESEND_API_KEY}\",\"type\":\"secret_text\"}"
 
-      - name: Set Cron
-        env:
-          CF_TOKEN: ${{ secrets.CF_API_TOKEN }}
-          CF_ACCOUNT: ${{ secrets.CF_ACCOUNT_ID }}
-        run: |
-          curl -s -X PUT "https://api.cloudflare.com/client/v4/accounts/${CF_ACCOUNT}/workers/scripts/iptv-trial-buyiptvnorway/schedules" \
-            -H "Authorization: Bearer ${CF_TOKEN}" -H "Content-Type: application/json" \
-            -d '[{"cron": "0 * * * *"}]'
-
-      - name: Fresh tests NOW
+      - name: Matrix test all combinations
         run: |
           sleep 5
           mkdir -p .debug
           API_KEY="35cf68cc83a3a82e1a0ac5361c7b6105"
 
-          echo "=== Reseller info (current balance) ===" > .debug/fresh.txt
-          curl -s "https://activationpanel.ru/api/api.php?action=reseller_info&api_key=${API_KEY}" >> .debug/fresh.txt
-          echo "" >> .debug/fresh.txt
+          echo "=== No pack param, sub=99 ===" > .debug/matrix.txt
+          curl -s "https://activationpanel.ru/api/api.php?action=new&type=m3u&sub=99&api_key=${API_KEY}" >> .debug/matrix.txt
+          echo "" >> .debug/matrix.txt
 
-          echo "=== TEST 1: sub=3 months pack=37498 Norway ===" >> .debug/fresh.txt
-          curl -s "https://activationpanel.ru/api/api.php?action=new&type=m3u&sub=3&pack=37498&api_key=${API_KEY}&note=test_3months" >> .debug/fresh.txt
-          echo "" >> .debug/fresh.txt
+          echo "=== No pack param, sub=1 ===" >> .debug/matrix.txt
+          curl -s "https://activationpanel.ru/api/api.php?action=new&type=m3u&sub=1&api_key=${API_KEY}" >> .debug/matrix.txt
+          echo "" >> .debug/matrix.txt
 
-          echo "=== TEST 2: sub=99 demo pack=37498 Norway ===" >> .debug/fresh.txt
-          curl -s "https://activationpanel.ru/api/api.php?action=new&type=m3u&sub=99&pack=37498&api_key=${API_KEY}&note=test_demo" >> .debug/fresh.txt
-          echo "" >> .debug/fresh.txt
+          echo "=== pack=29202 (USA-All), sub=99 ===" >> .debug/matrix.txt
+          curl -s "https://activationpanel.ru/api/api.php?action=new&type=m3u&sub=99&pack=29202&api_key=${API_KEY}" >> .debug/matrix.txt
+          echo "" >> .debug/matrix.txt
 
-          echo "=== Full worker POST ===" >> .debug/fresh.txt
-          curl -s -X POST "https://iptv-trial-buyiptvnorway.medmaar.workers.dev/" \
-            -H "Content-Type: application/json" \
-            -d '{"name":"Mo Test","email":"elmaaroufi.md@gmail.com","country":"Morocco","whatsapp":"+212689299813","device":"Samsung Smart TV","notes":"test"}' >> .debug/fresh.txt
-          echo "" >> .debug/fresh.txt
+          echo "=== pack=35107 (Germany), sub=99 ===" >> .debug/matrix.txt
+          curl -s "https://activationpanel.ru/api/api.php?action=new&type=m3u&sub=99&pack=35107&api_key=${API_KEY}" >> .debug/matrix.txt
+          echo "" >> .debug/matrix.txt
 
-          cat .debug/fresh.txt
+          echo "=== Verbose response for sub=1 no pack ===" >> .debug/matrix.txt
+          curl -sv "https://activationpanel.ru/api/api.php?action=new&type=m3u&sub=1&api_key=${API_KEY}" 2>&1 | tail -20 >> .debug/matrix.txt
+          echo "" >> .debug/matrix.txt
+
+          cat .debug/matrix.txt
 
       - name: Commit
         run: |
           git config user.name bot && git config user.email bot@example.com
-          git add .debug/fresh.txt
-          git commit -m "debug: fresh test with new demo tickets" || true
+          git add .debug/matrix.txt
+          git commit -m "debug: matrix test" || true
           git push || true
