@@ -1,0 +1,6 @@
+=== sub=1 pack=all ===
+{"status":"false","message":"Unable to create M3U"}
+=== sub=3 pack=37498 ===
+{"status":"false","message":"Unable to create M3U"}
+=== Reseller info full ===
+{"status":"true","username":"medmaar","enabled":1,"credits":"293.0"}
