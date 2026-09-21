@@ -1,0 +1,6 @@
+=== sub=99 pack=37498 (Norway specific) ===
+{"status":"false","message":"Not enough credits"}
+=== sub=99 pack=all ===
+{"status":"false","message":"Not enough credits"}
+=== sub=1 pack=37498 (1 month = uses credits) ===
+{"status":"false","message":"Unable to create M3U"}
