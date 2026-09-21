@@ -103,3 +103,17 @@ NorwayIPTV is Norway's #1 rated IPTV service — 50,000+ live channels in HD and
 - Free 24-hour trial with full access — no credit card required
 - Secure payments (SSL encrypted, never stored)
 - No contracts — pay and cancel any time
+
+## New IPTV player pages (September 2026)
+- XC IPTV Player: https://buyiptvnorway.com/xciptv.html
+- STBEmu Pro (STB Emulator): https://buyiptvnorway.com/stbemu.html
+- SS IPTV (Samsung/LG): https://buyiptvnorway.com/ssiptv.html
+- TVIP S-Box: https://buyiptvnorway.com/tvip-box.html
+- Tango IPTV alternative: https://buyiptvnorway.com/tango-iptv.html
+- Toucan IPTV alternative: https://buyiptvnorway.com/toucan-iptv.html
+- Trex IPTV alternative: https://buyiptvnorway.com/trex-iptv.html
+
+## Market targeting
+- Approved markets: Norway (primary), UK, USA, Canada, Australia, New Zealand, Germany, France, Sweden, Denmark, Netherlands, Poland, Lithuania, Romania, Serbia, Italy, Greece, Spain (es-ES), Portugal (pt-PT), Ukraine, Russia
+- Excluded markets: Africa (all), Middle East (all), Asia (all), Latin America (all), Turkey
+- This service does not provide IPTV for Arabic, Somali, Nigerian, Pakistani, Indian, Turkish, Brazilian or Mexican markets

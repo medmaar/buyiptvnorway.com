@@ -386,3 +386,50 @@
 /viking-iptv /viking-iptv.html 301
 /wwe-iptv-norway /wwe-iptv-norway.html 301
 /xtream-iptv /xtream-iptv.html 301
+
+# New brand pages — September 2026 (v2.0 keyword expansion)
+/xciptv /xciptv.html 301
+/stbemu /stbemu.html 301
+/stbemu-pro /stbemu.html 301
+/ssiptv /ssiptv.html 301
+/tvip-box /tvip-box.html 301
+/tvip-s-box /tvip-box.html 301
+/tvip-605 /tvip-box.html 301
+/tango-iptv /tango-iptv.html 301
+/toucan-iptv /toucan-iptv.html 301
+/trex-iptv /trex-iptv.html 301
+/trexiptv /trex-iptv.html 301
+
+# Keyword variant redirects (missing slug forms)
+/megaott /mega-iptv.html 301
+/megaott-iptv /mega-iptv.html 301
+/mega-ott /mega-iptv.html 301
+/m3u-list /m3u-iptv.html 301
+/m3u-liste /m3u-iptv.html 301
+/smartersplayer-lite /iptv-smasters.html 301
+/smarters-player-lite /iptv-smasters.html 301
+/dragoniptv /dragon-iptv.html 301
+/geckoiptv /gecko-iptv.html 301
+/hotiptv /hot-iptv.html 301
+/cobraiptv /cobra-iptv.html 301
+/flipiptv /flip-iptv.html 301
+/rapidiptv /iptv-rapid.html 301
+/blinkplayer /blink-iptv.html 301
+/buyiptv /buy-iptv-norway.html 301
+/get-iptv /buy-iptv-norway.html 301
+/xc-iptv /xciptv.html 301
+/xciptv-android /xciptv.html 301
+/xciptv-lg /xciptv.html 301
+/stbemu-iptv /stbemu.html 301
+/stbemu-4k /stbemu.html 301
+/ssiptv-android /ssiptv.html 301
+/ssiptv-com /ssiptv.html 301
+/tvip-s-box-605 /tvip-box.html 301
+/tvip-s-box-v-525 /tvip-box.html 301
+/tvip-s-box-v-530 /tvip-box.html 301
+/tvip-s-box-v-605 /tvip-box.html 301
+
+# Step 0.0 excluded keyword redirects (tombstone to hub)
+# arabic tv box → excluded market — redirect to iptv-internasjonal (neutral)
+/arabic-tv-box /iptv-internasjonal.html 301
+/gurbet-iptv /iptv-internasjonal.html 301
