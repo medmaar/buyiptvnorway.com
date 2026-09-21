@@ -1,3 +1,7 @@
+# NorwayIPTV — robots.txt
+# Sitemap (standalone — not inside any user-agent block)
+Sitemap: https://buyiptvnorway.com/sitemap.xml
+
 User-agent: *
 Allow: /
 Disallow: /go/
@@ -34,11 +38,13 @@ Allow: /
 User-agent: Google-Extended
 Allow: /
 
-
 User-agent: OAI-SearchBot
 Allow: /
 
 User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
 Allow: /
 
 User-agent: Diffbot
@@ -49,7 +55,6 @@ Allow: /
 
 User-agent: Meta-ExternalAgent
 Allow: /
-Sitemap: https://buyiptvnorway.com/sitemap.xml
 
 User-agent: GrokBot
 Allow: /
@@ -65,7 +70,3 @@ Allow: /
 
 User-agent: YouBot
 Allow: /
-
-User-agent: Applebot-Extended
-Allow: /
-
