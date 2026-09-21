@@ -10,67 +10,68 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
     steps:
       - uses: actions/checkout@v4
 
-      - name: Deploy
+      - name: Deploy Worker via Cloudflare API
         env:
           CF_TOKEN: ${{ secrets.CF_API_TOKEN }}
           CF_ACCOUNT: ${{ secrets.CF_ACCOUNT_ID }}
+          WORKER_NAME: iptv-trial-buyiptvnorway
         run: |
-          METADATA='{"main_module":"worker.js","compatibility_date":"2024-01-01","bindings":[{"type":"kv_namespace","name":"TRIALS","namespace_id":"f10eab6042014c46a62257cf849c06b5"}]}'
-          curl -s -X PUT "https://api.cloudflare.com/client/v4/accounts/${CF_ACCOUNT}/workers/scripts/iptv-trial-buyiptvnorway" \
+          METADATA=$(cat <<'METADATA'
+          {
+            "main_module": "worker.js",
+            "compatibility_date": "2024-01-01",
+            "bindings": [
+              {
+                "type": "kv_namespace",
+                "name": "TRIALS",
+                "namespace_id": "f10eab6042014c46a62257cf849c06b5"
+              }
+            ]
+          }
+          METADATA
+          )
+          curl -s -X PUT \
+            "https://api.cloudflare.com/client/v4/accounts/${CF_ACCOUNT}/workers/scripts/${WORKER_NAME}" \
             -H "Authorization: Bearer ${CF_TOKEN}" \
             -F "metadata=${METADATA};type=application/json" \
             -F "worker.js=@worker/worker.js;type=application/javascript+module"
-          curl -s -X POST "https://api.cloudflare.com/client/v4/accounts/${CF_ACCOUNT}/workers/scripts/iptv-trial-buyiptvnorway/subdomain" \
-            -H "Authorization: Bearer ${CF_TOKEN}" -H "Content-Type: application/json" -d '{"enabled":true}'
-          curl -s -X PUT "https://api.cloudflare.com/client/v4/accounts/${CF_ACCOUNT}/workers/scripts/iptv-trial-buyiptvnorway/schedules" \
-            -H "Authorization: Bearer ${CF_TOKEN}" -H "Content-Type: application/json" -d '[{"cron":"0 * * * *"}]'
 
-      - name: Store secret
+      - name: Store Resend key as CF Worker Secret
         env:
           CF_TOKEN: ${{ secrets.CF_API_TOKEN }}
           CF_ACCOUNT: ${{ secrets.CF_ACCOUNT_ID }}
+          WORKER_NAME: iptv-trial-buyiptvnorway
           RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
         run: |
-          curl -s -X PUT "https://api.cloudflare.com/client/v4/accounts/${CF_ACCOUNT}/workers/scripts/iptv-trial-buyiptvnorway/secrets" \
-            -H "Authorization: Bearer ${CF_TOKEN}" -H "Content-Type: application/json" \
+          curl -s -X PUT \
+            "https://api.cloudflare.com/client/v4/accounts/${CF_ACCOUNT}/workers/scripts/${WORKER_NAME}/secrets" \
+            -H "Authorization: Bearer ${CF_TOKEN}" \
+            -H "Content-Type: application/json" \
             -d "{\"name\":\"RESEND_KEY\",\"text\":\"${RESEND_API_KEY}\",\"type\":\"secret_text\"}"
 
-      - name: Matrix test all combinations
+      - name: Enable workers.dev subdomain
+        env:
+          CF_TOKEN: ${{ secrets.CF_API_TOKEN }}
+          CF_ACCOUNT: ${{ secrets.CF_ACCOUNT_ID }}
+          WORKER_NAME: iptv-trial-buyiptvnorway
         run: |
-          sleep 5
-          mkdir -p .debug
-          API_KEY="35cf68cc83a3a82e1a0ac5361c7b6105"
+          curl -s -X POST \
+            "https://api.cloudflare.com/client/v4/accounts/${CF_ACCOUNT}/workers/scripts/${WORKER_NAME}/subdomain" \
+            -H "Authorization: Bearer ${CF_TOKEN}" \
+            -H "Content-Type: application/json" \
+            -d '{"enabled": true}'
 
-          echo "=== No pack param, sub=99 ===" > .debug/matrix.txt
-          curl -s "https://activationpanel.ru/api/api.php?action=new&type=m3u&sub=99&api_key=${API_KEY}" >> .debug/matrix.txt
-          echo "" >> .debug/matrix.txt
-
-          echo "=== No pack param, sub=1 ===" >> .debug/matrix.txt
-          curl -s "https://activationpanel.ru/api/api.php?action=new&type=m3u&sub=1&api_key=${API_KEY}" >> .debug/matrix.txt
-          echo "" >> .debug/matrix.txt
-
-          echo "=== pack=29202 (USA-All), sub=99 ===" >> .debug/matrix.txt
-          curl -s "https://activationpanel.ru/api/api.php?action=new&type=m3u&sub=99&pack=29202&api_key=${API_KEY}" >> .debug/matrix.txt
-          echo "" >> .debug/matrix.txt
-
-          echo "=== pack=35107 (Germany), sub=99 ===" >> .debug/matrix.txt
-          curl -s "https://activationpanel.ru/api/api.php?action=new&type=m3u&sub=99&pack=35107&api_key=${API_KEY}" >> .debug/matrix.txt
-          echo "" >> .debug/matrix.txt
-
-          echo "=== Verbose response for sub=1 no pack ===" >> .debug/matrix.txt
-          curl -sv "https://activationpanel.ru/api/api.php?action=new&type=m3u&sub=1&api_key=${API_KEY}" 2>&1 | tail -20 >> .debug/matrix.txt
-          echo "" >> .debug/matrix.txt
-
-          cat .debug/matrix.txt
-
-      - name: Commit
+      - name: Set Cron Trigger
+        env:
+          CF_TOKEN: ${{ secrets.CF_API_TOKEN }}
+          CF_ACCOUNT: ${{ secrets.CF_ACCOUNT_ID }}
+          WORKER_NAME: iptv-trial-buyiptvnorway
         run: |
-          git config user.name bot && git config user.email bot@example.com
-          git add .debug/matrix.txt
-          git commit -m "debug: matrix test" || true
-          git push || true
+          curl -s -X PUT \
+            "https://api.cloudflare.com/client/v4/accounts/${CF_ACCOUNT}/workers/scripts/${WORKER_NAME}/schedules" \
+            -H "Authorization: Bearer ${CF_TOKEN}" \
+            -H "Content-Type: application/json" \
+            -d '[{"cron": "0 * * * *"}]'
