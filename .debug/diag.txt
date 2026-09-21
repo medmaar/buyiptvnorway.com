@@ -1,6 +1,0 @@
-=== GET ===
-NorwayIPTV Trial Worker — OK
-=== Full POST (real data) ===
-{"success":false,"error":"[create_demo] Panel: Not enough credits"}
-=== Secrets in CF ===
-RESEND_KEY
