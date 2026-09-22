@@ -1,6 +1,6 @@
 # NorwayIPTV — llms.txt
 # https://buyiptvnorway.com
-# Updated: 2026-09-21
+# Updated: 2026-09-22
 
 NorwayIPTV is Norway's #1 rated IPTV service — 50,000+ live channels in HD and 4K, 300,000+ movies and series, plans from €9/month.
 
