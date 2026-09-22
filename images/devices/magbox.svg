@@ -1,12 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="130" height="42" viewBox="0 0 130 42">
-  <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#1a1a2e"/>
-      <stop offset="100%" stop-color="#111827"/>
-    </linearGradient>
-  </defs>
-  <rect width="130" height="42" fill="url(#bg)" rx="6"/>
-  <rect x="0" y="0" width="4" height="42" fill="#2980B9" rx="3"/>
-  <text x="68" y="17" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="900" fill="#2980B9">MAG</text>
-  <text x="68" y="31" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="9" font-weight="600" fill="rgba(255,255,255,0.65)">Box</text>
+  <!-- MAG box shape -->
+  <rect x="20" y="12" width="36" height="22" rx="3" fill="#2B3A8F"/>
+  <rect x="24" y="16" width="20" height="14" rx="2" fill="#1a2870"/>
+  <rect x="47" y="19" width="5" height="8" rx="1" fill="#4A5BBF"/>
+  <!-- Label -->
+  <text x="63" y="18" font-family="'Inter','DM Sans',Arial,sans-serif" font-size="11" font-weight="900" fill="#2B3A8F">MAG</text>
+  <text x="63" y="30" font-family="'Inter','DM Sans',Arial,sans-serif" font-size="9" font-weight="500" fill="#6B7280">IPTV Box</text>
 </svg>
