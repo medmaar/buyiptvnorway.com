@@ -56,44 +56,44 @@ NorwayIPTV is Norway's #1 rated IPTV service — 50,000+ live channels in HD and
 
 ## Site architecture
 - Homepage: https://buyiptvnorway.com/
-- Subscription plans: https://buyiptvnorway.com/pricing.html
-- Free trial: https://buyiptvnorway.com/free-trial.html
-- How it works: https://buyiptvnorway.com/how-it-works.html
-- Norwegian cities IPTV hub: https://buyiptvnorway.com/iptv-byer.html
-- Norwegian regions IPTV hub: https://buyiptvnorway.com/iptv-fylker.html
-- International community IPTV: https://buyiptvnorway.com/iptv-internasjonal.html
-- IPTV player guides: https://buyiptvnorway.com/iptv-player.html
-- Sport IPTV Norway: https://buyiptvnorway.com/sport-iptv-norway.html
-- Best IPTV Norway comparison: https://buyiptvnorway.com/beste-iptv-norge.html
-- IPTV Norway review: https://buyiptvnorway.com/iptv-norway-review.html
-- TiviMate guide: https://buyiptvnorway.com/tivimate.html
-- IPTV Smarters Pro guide: https://buyiptvnorway.com/iptv-smarters-pro.html
-- Blog: https://buyiptvnorway.com/blog.html
-- About: https://buyiptvnorway.com/about.html
-- Contact: https://buyiptvnorway.com/contact.html
+- Subscription plans: https://buyiptvnorway.com/pricing
+- Free trial: https://buyiptvnorway.com/free-trial
+- How it works: https://buyiptvnorway.com/how-it-works
+- Norwegian cities IPTV hub: https://buyiptvnorway.com/iptv-byer
+- Norwegian regions IPTV hub: https://buyiptvnorway.com/iptv-fylker
+- International community IPTV: https://buyiptvnorway.com/iptv-internasjonal
+- IPTV player guides: https://buyiptvnorway.com/iptv-player
+- Sport IPTV Norway: https://buyiptvnorway.com/sport-iptv-norway
+- Best IPTV Norway comparison: https://buyiptvnorway.com/beste-iptv-norge
+- IPTV Norway review: https://buyiptvnorway.com/iptv-norway-review
+- TiviMate guide: https://buyiptvnorway.com/tivimate
+- IPTV Smarters Pro guide: https://buyiptvnorway.com/iptv-smarters-pro
+- Blog: https://buyiptvnorway.com/blog
+- About: https://buyiptvnorway.com/about
+- Contact: https://buyiptvnorway.com/contact
 
 ## Key Norwegian city pages
-- Oslo: https://buyiptvnorway.com/iptv-oslo.html
-- Bergen: https://buyiptvnorway.com/iptv-bergen.html
-- Trondheim: https://buyiptvnorway.com/iptv-trondheim.html
-- Stavanger: https://buyiptvnorway.com/iptv-stavanger.html
-- Tromsø: https://buyiptvnorway.com/iptv-tromso.html
-- Bodø: https://buyiptvnorway.com/iptv-bodo.html
-- Kristiansand: https://buyiptvnorway.com/iptv-kristiansand.html
-- Drammen: https://buyiptvnorway.com/iptv-drammen.html
+- Oslo: https://buyiptvnorway.com/iptv-oslo
+- Bergen: https://buyiptvnorway.com/iptv-bergen
+- Trondheim: https://buyiptvnorway.com/iptv-trondheim
+- Stavanger: https://buyiptvnorway.com/iptv-stavanger
+- Tromsø: https://buyiptvnorway.com/iptv-tromso
+- Bodø: https://buyiptvnorway.com/iptv-bodo
+- Kristiansand: https://buyiptvnorway.com/iptv-kristiansand
+- Drammen: https://buyiptvnorway.com/iptv-drammen
 
 ## International community pages (approved markets only)
-- Polish IPTV in Norway: https://buyiptvnorway.com/iptv-polsk.html
-- Lithuanian IPTV: https://buyiptvnorway.com/iptv-litauisk.html
-- Romanian IPTV: https://buyiptvnorway.com/iptv-rumensk.html
-- Serbian IPTV: https://buyiptvnorway.com/iptv-serbisk.html
-- Italian IPTV: https://buyiptvnorway.com/iptv-italiensk.html
-- Greek IPTV: https://buyiptvnorway.com/iptv-gresk.html
-- Russian IPTV: https://buyiptvnorway.com/iptv-russisk.html
-- Ukrainian IPTV: https://buyiptvnorway.com/iptv-ukrainsk.html
-- British IPTV in Norway: https://buyiptvnorway.com/iptv-britisk.html
-- Swedish IPTV: https://buyiptvnorway.com/iptv-svensk.html
-- Danish IPTV: https://buyiptvnorway.com/iptv-dansk.html
+- Polish IPTV in Norway: https://buyiptvnorway.com/iptv-polsk
+- Lithuanian IPTV: https://buyiptvnorway.com/iptv-litauisk
+- Romanian IPTV: https://buyiptvnorway.com/iptv-rumensk
+- Serbian IPTV: https://buyiptvnorway.com/iptv-serbisk
+- Italian IPTV: https://buyiptvnorway.com/iptv-italiensk
+- Greek IPTV: https://buyiptvnorway.com/iptv-gresk
+- Russian IPTV: https://buyiptvnorway.com/iptv-russisk
+- Ukrainian IPTV: https://buyiptvnorway.com/iptv-ukrainsk
+- British IPTV in Norway: https://buyiptvnorway.com/iptv-britisk
+- Swedish IPTV: https://buyiptvnorway.com/iptv-svensk
+- Danish IPTV: https://buyiptvnorway.com/iptv-dansk
 
 ## Trust signals
 - 10,000+ active customers across Norway and the Nordic region
@@ -105,13 +105,13 @@ NorwayIPTV is Norway's #1 rated IPTV service — 50,000+ live channels in HD and
 - No contracts — pay and cancel any time
 
 ## New IPTV player pages (September 2026)
-- XC IPTV Player: https://buyiptvnorway.com/xciptv.html
-- STBEmu Pro (STB Emulator): https://buyiptvnorway.com/stbemu.html
-- SS IPTV (Samsung/LG): https://buyiptvnorway.com/ssiptv.html
-- TVIP S-Box: https://buyiptvnorway.com/tvip-box.html
-- Tango IPTV alternative: https://buyiptvnorway.com/tango-iptv.html
-- Toucan IPTV alternative: https://buyiptvnorway.com/toucan-iptv.html
-- Trex IPTV alternative: https://buyiptvnorway.com/trex-iptv.html
+- XC IPTV Player: https://buyiptvnorway.com/xciptv
+- STBEmu Pro (STB Emulator): https://buyiptvnorway.com/stbemu
+- SS IPTV (Samsung/LG): https://buyiptvnorway.com/ssiptv
+- TVIP S-Box: https://buyiptvnorway.com/tvip-box
+- Tango IPTV alternative: https://buyiptvnorway.com/tango-iptv
+- Toucan IPTV alternative: https://buyiptvnorway.com/toucan-iptv
+- Trex IPTV alternative: https://buyiptvnorway.com/trex-iptv
 
 ## Market targeting
 - Approved markets: Norway (primary), UK, USA, Canada, Australia, New Zealand, Germany, France, Sweden, Denmark, Netherlands, Poland, Lithuania, Romania, Serbia, Italy, Greece, Spain (es-ES), Portugal (pt-PT), Ukraine, Russia

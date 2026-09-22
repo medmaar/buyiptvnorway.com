@@ -38,7 +38,6 @@
 <!-- hreflang: Norwegian/English targeting -->
 <link href="https://buyiptvnorway.com/" hreflang="x-default" rel="alternate"/>
 <link href="https://buyiptvnorway.com/" hreflang="nb-NO" rel="alternate"/>
-<link href="https://buyiptvnorway.com/" hreflang="en" rel="alternate"/>
 <link href="https://buyiptvnorway.com/" hreflang="en-GB" rel="alternate"/>
 <link href="https://buyiptvnorway.com/" hreflang="en-US" rel="alternate"/>
 <link href="https://buyiptvnorway.com/" hreflang="en-CA" rel="alternate"/>
@@ -63,7 +62,7 @@
     "priceValidUntil": "2026-12-31",
     "availability": "https://schema.org/InStock",
     "itemCondition": "https://schema.org/NewCondition",
-    "url": "https://buyiptvnorway.com/pricing.html",
+    "url": "https://buyiptvnorway.com/pricing",
     "seller": {
       "@type": "Organization",
       "name": "NorwayIPTV",
@@ -124,7 +123,7 @@
       "Norwegian",
       "English"
     ],
-    "url": "https://buyiptvnorway.com/contact.html"
+    "url": "https://buyiptvnorway.com/contact"
   }
 }</script>
 <script type="application/ld+json">{
@@ -142,8 +141,7 @@
     "query-input": "required name=search_term_string"
   }
 }</script>
-<script type="application/ld+json">
-  {
+<script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
@@ -348,8 +346,7 @@
       }
     }
   ]
-}
-  </script>
+}</script>
 <!-- Google Fonts: single async request (non-render-blocking) -->
 <link as="style" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,700&amp;family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&amp;display=swap" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/>
 <noscript>
@@ -681,15 +678,35 @@ img:is([sizes="auto" i], [sizes^="auto," i]) { contain-intrinsic-size: 3000px 15
   "priceRange": "€9-€450",
   "openingHoursSpecification": {
     "@type": "OpeningHoursSpecification",
-    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+    "dayOfWeek": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+      "Sunday"
+    ],
     "opens": "00:00",
     "closes": "23:59"
   },
   "areaServed": [
-    {"@type": "Country", "name": "Norway"},
-    {"@type": "Country", "name": "Sweden"},
-    {"@type": "Country", "name": "Denmark"},
-    {"@type": "Country", "name": "Finland"}
+    {
+      "@type": "Country",
+      "name": "Norway"
+    },
+    {
+      "@type": "Country",
+      "name": "Sweden"
+    },
+    {
+      "@type": "Country",
+      "name": "Denmark"
+    },
+    {
+      "@type": "Country",
+      "name": "Finland"
+    }
   ],
   "aggregateRating": {
     "@type": "AggregateRating",
@@ -702,15 +719,81 @@ img:is([sizes="auto" i], [sizes^="auto," i]) { contain-intrinsic-size: 3000px 15
     "@type": "OfferCatalog",
     "name": "IPTV Norway Subscription Plans",
     "itemListElement": [
-      {"@type": "Offer", "name": "1 Month IPTV Norway", "price": "9", "priceCurrency": "EUR"},
-      {"@type": "Offer", "name": "3 Months IPTV Norway", "price": "29", "priceCurrency": "EUR"},
-      {"@type": "Offer", "name": "6 Months IPTV Norway", "price": "39", "priceCurrency": "EUR"},
-      {"@type": "Offer", "name": "12 Months IPTV Norway", "price": "49", "priceCurrency": "EUR"}
+      {
+        "@type": "Offer",
+        "name": "1 Month IPTV Norway",
+        "price": "9",
+        "priceCurrency": "EUR"
+      },
+      {
+        "@type": "Offer",
+        "name": "3 Months IPTV Norway",
+        "price": "29",
+        "priceCurrency": "EUR"
+      },
+      {
+        "@type": "Offer",
+        "name": "6 Months IPTV Norway",
+        "price": "39",
+        "priceCurrency": "EUR"
+      },
+      {
+        "@type": "Offer",
+        "name": "12 Months IPTV Norway",
+        "price": "49",
+        "priceCurrency": "EUR"
+      }
     ]
   }
 }</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"ItemList","name":"NorwayIPTV Subscription Plans Norway","description":"IPTV Norway subscription plans from €9/month — 50,000+ channels, IPTV Premier League, NRK and TV2.","itemListElement":[{"@type":"ListItem","position":1,"name":"1 Month IPTV Norway","url":"https://buyiptvnorway.com/iptv-1-month-1-connection.html","description":"From €9/month"},{"@type":"ListItem","position":2,"name":"3 Months IPTV Norway","url":"https://buyiptvnorway.com/iptv-3-months-1-connection.html","description":"From €29/3 months"},{"@type":"ListItem","position":3,"name":"6 Months IPTV Norway","url":"https://buyiptvnorway.com/iptv-6-months-1-connection.html","description":"From €39/6 months"},{"@type":"ListItem","position":4,"name":"12 Months IPTV Norway","url":"https://buyiptvnorway.com/iptv-12-months-1-connection.html","description":"From €49/year — best value"}]}</script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "NorwayIPTV — Beste IPTV Norge", "item": "https://buyiptvnorway.com/"}]}</script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "NorwayIPTV Subscription Plans Norway",
+  "description": "IPTV Norway subscription plans from €9/month — 50,000+ channels, IPTV Premier League, NRK and TV2.",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "1 Month IPTV Norway",
+      "url": "https://buyiptvnorway.com/iptv-1-month-1-connection",
+      "description": "From €9/month"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "3 Months IPTV Norway",
+      "url": "https://buyiptvnorway.com/iptv-3-months-1-connection",
+      "description": "From €29/3 months"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "6 Months IPTV Norway",
+      "url": "https://buyiptvnorway.com/iptv-6-months-1-connection",
+      "description": "From €39/6 months"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "12 Months IPTV Norway",
+      "url": "https://buyiptvnorway.com/iptv-12-months-1-connection",
+      "description": "From €49/year — best value"
+    }
+  ]
+}</script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "NorwayIPTV — Beste IPTV Norge",
+      "item": "https://buyiptvnorway.com/"
+    }
+  ]
+}</script>
 </meta></head>
 <body class="home">
 <a class="skip-link" href="#content" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;z-index:-999;">Skip to main content</a>
@@ -2089,6 +2172,46 @@ document.addEventListener('DOMContentLoaded',function(){
 });
 </script>
 
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"NorwayIPTV","url":"https://buyiptvnorway.com/","logo":"https://buyiptvnorway.com/images/norwayiptv-logo.svg","email":"contact@buyiptvnorway.com","description":"Beste IPTV Norge — 50,000+ kanaler, 4K IPTV, IPTV Premier League, NRK og TV2. Fra €9/mnd.","foundingDate":"2022","sameAs":["https://t.me/norwayiptv","https://wa.me/17828026280"],"contactPoint":{"@type":"ContactPoint","contactType":"customer support","availableLanguage":["Norwegian","English"],"contactOption":"https://schema.org/TollFree"},"areaServed":[{"@type":"Country","name":"Norway"},{"@type":"Country","name":"Sweden"},{"@type":"Country","name":"Denmark"},{"@type":"Country","name":"United Kingdom"}]}</script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "NorwayIPTV",
+  "url": "https://buyiptvnorway.com/",
+  "logo": "https://buyiptvnorway.com/images/norwayiptv-logo.svg",
+  "email": "contact@buyiptvnorway.com",
+  "description": "Beste IPTV Norge — 50,000+ kanaler, 4K IPTV, IPTV Premier League, NRK og TV2. Fra €9/mnd.",
+  "foundingDate": "2022",
+  "sameAs": [
+    "https://t.me/norwayiptv",
+    "https://wa.me/17828026280"
+  ],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "customer support",
+    "availableLanguage": [
+      "Norwegian",
+      "English"
+    ],
+    "contactOption": "https://schema.org/TollFree"
+  },
+  "areaServed": [
+    {
+      "@type": "Country",
+      "name": "Norway"
+    },
+    {
+      "@type": "Country",
+      "name": "Sweden"
+    },
+    {
+      "@type": "Country",
+      "name": "Denmark"
+    },
+    {
+      "@type": "Country",
+      "name": "United Kingdom"
+    }
+  ]
+}</script>
 </body>
 </html>
