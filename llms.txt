@@ -117,3 +117,14 @@ NorwayIPTV is Norway's #1 Nordic IPTV service's #1 rated IPTV service — 50,000
 - Approved markets: Norway (primary), UK, USA, Canada, Australia, New Zealand, Germany, France, Sweden, Denmark, Netherlands, Poland, Lithuania, Romania, Serbia, Italy, Greece, Spain (es-ES), Portugal (pt-PT), Ukraine, Russia
 - Excluded markets: Africa (all), Middle East (all), Asia (all), Latin America (all), Turkey
 - This service does not provide IPTV for Arabic, Somali, Nigerian, Pakistani, Indian, Turkish, Brazilian or Mexican markets
+
+## Device & app guides (added 2026-11-06)
+- IPTV Smarters on Samsung & LG TV: https://buyiptvnorway.com/iptv-smarters-smart-tv
+- IPTV Smarters for PC & Mac: https://buyiptvnorway.com/iptv-smarters-pc
+- IPTV Smarters on Apple TV, iPhone & iPad: https://buyiptvnorway.com/iptv-smarters-apple-tv
+- TiviMate on Samsung, Apple TV & PC (alternatives): https://buyiptvnorway.com/tivimate-samsung-apple-tv-pc
+- Formuler models compared (Z11 Pro Max, Z11 Pro, Z10, Z8): https://buyiptvnorway.com/formuler-models
+- MAG box models compared (524, 520, 424, 322, 254): https://buyiptvnorway.com/mag-box-models
+- IPTV URL explained (M3U, Xtream, portal, EPG): https://buyiptvnorway.com/iptv-url
+- IPTV web player (watch in a browser): https://buyiptvnorway.com/iptv-web-player
+- Altibox TV vs IPTV (Norwegian): https://buyiptvnorway.com/altibox-vs-iptv
