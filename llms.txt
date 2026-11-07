@@ -1,8 +1,8 @@
 # NorwayIPTV — llms.txt
 # https://buyiptvnorway.com
-# Updated: 2026-09-22
+# Updated: 2026-11-07
 
-NorwayIPTV is Norway's #1 Nordic IPTV service's #1 rated IPTV service — 50,000+ live channels in HD and 4K, 300,000+ movies and series, plans from €9/month.
+NorwayIPTV is an IPTV subscription service for Norway and the Nordics — 50,000+ live channels in HD and 4K, 300,000+ movies and series, plans from €9/month, free 24-hour trial.
 
 ## About
 - Service: Premium IPTV streaming (IP Television / Internet Protocol Television)
