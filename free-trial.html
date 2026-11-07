@@ -762,9 +762,10 @@ async function submitTrial(e){
   try{
     var r=await fetch('https://iptv-trial-buyiptvnorway.medmaar.workers.dev',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({name:n,email:em,country:co,device:dv,whatsapp:wa,notes:nt})});
     var d=await r.json();
-    if(r.ok&&d.success){if(window.celebrate)celebrate('trial',em);
+    if(r.ok&&d.success){
       area.style.display='none';suc.style.display='block';
       suc.innerHTML='<div style="font-size:3rem;margin-bottom:.75rem">✅</div><h3 style="color:#2ecc71;font-size:1.5rem;font-weight:900;margin-bottom:.5rem">Your Trial is Active!</h3><p style="color:rgba(255,255,255,.8);line-height:1.7">Credentials sent to <strong>'+em+'</strong>.<br>Check your <strong>inbox</strong> now (and spam folder too).</p><a href="pricing.html" style="display:inline-block;margin-top:1.25rem;padding:11px 24px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.1);border-radius:10px;color:#fff;font-weight:700;font-size:.88rem">View Paid Plans</a>';
+      if(window.celebrate)celebrate('trial',em);
     }else{reset('Submission failed. Please try again or contact us on WhatsApp.');}
   }catch(ex){reset('Network error. Please try again or contact us: contact@buyiptvnorway.com');console.error(ex);}
 }
@@ -880,5 +881,5 @@ async function submitTrial(e){
     }
   ]
 }</script>
-<script src="/assets/celebrate.js?v=1" defer></script>
+<script src="/assets/celebrate.js?v=2" defer></script>
 </body></html>
