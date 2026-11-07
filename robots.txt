@@ -8,12 +8,10 @@ Disallow: /go/
 
 User-agent: Googlebot
 Allow: /
-Crawl-delay: 1
 Disallow: /go/
 
 User-agent: Bingbot
 Allow: /
-Crawl-delay: 2
 Disallow: /go/
 
 # Allow AI crawlers (GEO/AEO optimisation)
