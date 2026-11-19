@@ -23,6 +23,7 @@ jobs:
           {
             "main_module": "worker.js",
             "compatibility_date": "2024-01-01",
+            "keep_bindings": ["secret_text", "secret_key"],
             "bindings": [
               {
                 "type": "kv_namespace",
