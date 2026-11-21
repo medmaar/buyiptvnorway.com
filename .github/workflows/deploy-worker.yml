@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - 'worker/worker.js'
+      - '.github/workflows/deploy-worker.yml'
   workflow_dispatch:
 
 jobs:
@@ -39,19 +40,6 @@ jobs:
             -H "Authorization: Bearer ${CF_TOKEN}" \
             -F "metadata=${METADATA};type=application/json" \
             -F "worker.js=@worker/worker.js;type=application/javascript+module"
-
-      - name: Store Resend key as CF Worker Secret
-        env:
-          CF_TOKEN: ${{ secrets.CF_API_TOKEN }}
-          CF_ACCOUNT: ${{ secrets.CF_ACCOUNT_ID }}
-          WORKER_NAME: iptv-trial-buyiptvnorway
-          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
-        run: |
-          curl -s -X PUT \
-            "https://api.cloudflare.com/client/v4/accounts/${CF_ACCOUNT}/workers/scripts/${WORKER_NAME}/secrets" \
-            -H "Authorization: Bearer ${CF_TOKEN}" \
-            -H "Content-Type: application/json" \
-            -d "{\"name\":\"RESEND_KEY\",\"text\":\"${RESEND_API_KEY}\",\"type\":\"secret_text\"}"
 
       - name: Enable workers.dev subdomain
         env:
